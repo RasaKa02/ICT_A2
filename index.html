@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MijnGezondheid.net — toegankelijk / accessible</title>
-  <link rel="stylesheet" href="css/styles.css?v=20260619-meds3" />
+  <link rel="stylesheet" href="css/styles.css?v=20260628-flows2" />
 </head>
 <body>
 
@@ -346,7 +346,20 @@
           <span class="opt-mark" aria-hidden="true"></span>
           <span class="option-text"><strong data-i18n="meds.med2">Lisinopril 10 mg tabletten</strong><small data-i18n="meds.prescriptionOnly">Alleen verkrijgbaar op recept</small></span>
         </button>
+        <button type="button" class="option med-choice" data-med="other" onclick="window.MGSelectMedicine && window.MGSelectMedicine('other')">
+          <span class="opt-mark" aria-hidden="true"></span>
+          <span class="option-text"><strong data-i18n="meds.medOther">Mijn medicijn staat niet in deze lijst</strong><small data-i18n="meds.medOtherHint">Laat ons weten welk medicijn u bedoelt</small></span>
+        </button>
+        <button type="button" class="option med-choice" data-med="unsure" onclick="window.MGSelectMedicine && window.MGSelectMedicine('unsure')">
+          <span class="opt-mark" aria-hidden="true"></span>
+          <span class="option-text"><strong data-i18n="meds.medUnsure">Ik weet niet zeker welk medicijn ik nodig heb</strong><small data-i18n="meds.medUnsureHint">De praktijk neemt contact met u op om dit te bespreken</small></span>
+        </button>
       </div>
+      <div class="field" id="meds-other-field" style="display:none">
+        <label for="meds-other-input" data-i18n="meds.medOtherInputLabel">Welk medicijn heeft u nodig?</label>
+        <input type="text" id="meds-other-input" />
+      </div>
+      <div class="card" id="meds-usage-instructions" style="display:none"></div>
       <div class="btn-row">
         <button class="btn secondary grow" data-go="meds-home" data-i18n="nav.previous">Vorige</button>
         <button class="btn grow" id="meds-what-next" disabled data-i18n="nav.next" onclick="window.MGGoMedicineHow && window.MGGoMedicineHow()">Volgende</button>
@@ -384,6 +397,10 @@
       <h1 class="speakable" data-i18n="meds.checkTitle">Controleer uw bestelling</h1>
       <hr class="section-rule" />
       <p class="med-step-status speakable" data-i18n="meds.status.check">Stap 3 van 3: controleer en verstuur</p>
+      <div class="notice info">
+        <svg class="n-ico" aria-hidden="true"><use href="#i-info"/></svg>
+        <span class="speakable" data-i18n="meds.notSubmittedNotice">Dit is alleen een overzicht — uw bestelling is nog niet verstuurd.</span>
+      </div>
       <div class="card" id="meds-check-summary"></div>
       <div class="btn-row">
         <button class="btn secondary grow" data-go="meds-how" data-i18n="nav.previous">Vorige</button>
@@ -398,6 +415,12 @@
       <div class="notice success">
         <svg class="n-ico" aria-hidden="true" style="color:var(--ok)"><use href="#i-check"/></svg>
         <span class="speakable" data-i18n="meds.confirmMsg">De praktijk controleert uw aanvraag. U krijgt een bericht wanneer uw medicijn klaarstaat.</span>
+      </div>
+      <div class="card" id="meds-confirm-summary"></div>
+      <div class="call-hatch">
+        <svg class="n-ico" aria-hidden="true" style="color:var(--magenta)"><use href="#i-phone"/></svg>
+        <span class="speakable" data-i18n="meds.confirmCallNote">Foutje gemaakt? Bel ons:</span>
+        <a href="tel:0725613913">072-561 3913</a>
       </div>
       <div class="btn-row">
         <button class="btn secondary grow" data-go="meds-home" data-i18n="meds.more">Terug naar mijn medicijnen</button>
@@ -452,20 +475,69 @@
       <button class="link-back" data-go="home" data-i18n="back.home">Terug naar home</button>
     </section>
 
-    <!-- ---------- CHAT: choose type ---------- -->
+    <!-- ---------- CHAT: choose recipient ---------- -->
     <section class="view" data-view="chat-type" aria-label="Ask the GP">
       <h1 class="speakable" data-i18n="chatType.title">Ask the GP or pharmacy</h1>
       <hr class="section-rule" />
-      <p class="speakable" data-i18n="chatType.lead">What would you like to ask about?</p>
+      <p class="speakable" data-i18n="chatType.lead">Who would you like to contact?</p>
       <div class="action-grid">
-        <button class="action-btn" data-go="chat-form">
+        <button class="action-btn" id="chat-recipient-gp" onclick="window.MGSelectChatRecipient && window.MGSelectChatRecipient('gp')">
           <svg class="ab-ico" aria-hidden="true"><use href="#i-doctor"/></svg>
-          <span data-i18n="chatType.new">A new question or complaint<small>Something you have not discussed before</small></span>
+          <span data-i18n="chatType.gp">Ask the GP a question<small>Medical questions or complaints</small></span>
         </button>
-        <button class="action-btn ghost" data-go="chat-form">
-          <svg class="ab-ico" aria-hidden="true"><use href="#i-history"/></svg>
-          <span data-i18n="chatType.known">About something from before<small>A complaint you discussed earlier</small></span>
+        <button class="action-btn" id="chat-recipient-pharmacy" onclick="window.MGSelectChatRecipient && window.MGSelectChatRecipient('pharmacy')">
+          <svg class="ab-ico" aria-hidden="true"><use href="#i-pills"/></svg>
+          <span data-i18n="chatType.pharmacy">Ask the pharmacy a question<small>Questions about your medicines</small></span>
         </button>
+      </div>
+      <div class="action-grid">
+        <button class="action-btn ghost" data-go="appt-intro">
+          <svg class="ab-ico" aria-hidden="true"><use href="#i-calendar"/></svg>
+          <span data-i18n="chatType.apptOption">I'd like to make an appointment instead<small>Skip the message — book a time directly</small></span>
+        </button>
+      </div>
+      <div class="notice warn" id="chat-type-urgent">
+        <svg class="n-ico" aria-hidden="true"><use href="#i-warn"/></svg>
+        <span class="speakable" data-i18n="chatType.urgent">Is it urgent? Always call the practice. Call 112 for life-threatening situations.</span>
+      </div>
+      <div class="call-hatch">
+        <svg class="n-ico" aria-hidden="true" style="color:var(--magenta)"><use href="#i-phone"/></svg>
+        <span class="speakable" data-i18n="chatType.callLabel">Call the practice:</span>
+        <a href="tel:0725613913">072-561 3913</a>
+      </div>
+      <button class="link-back" data-go="home" data-i18n="back.home">Back to home</button>
+    </section>
+
+    <!-- ---------- CHAT: category ---------- -->
+    <section class="view" data-view="chat-category" aria-label="What is your question about">
+      <h1 class="speakable" data-i18n="chatCategory.title">What is your question about?</h1>
+      <hr class="section-rule" />
+      <p class="speakable" data-i18n="chatCategory.lead">Choose the option that fits best.</p>
+      <div class="options" role="group" id="chat-category-options">
+        <button type="button" class="option chat-cat-choice" data-cat="new" onclick="window.MGSelectChatCategory && window.MGSelectChatCategory('new')">
+          <span class="opt-mark" aria-hidden="true"></span>
+          <span class="option-text"><strong data-i18n="chatCategory.opt1">Ask a new question</strong><small data-i18n="chatCategory.opt1Hint">Something you have not discussed before</small></span>
+        </button>
+        <button type="button" class="option chat-cat-choice" data-cat="before" onclick="window.MGSelectChatCategory && window.MGSelectChatCategory('before')">
+          <span class="opt-mark" aria-hidden="true"></span>
+          <span class="option-text"><strong data-i18n="chatCategory.opt2">About something from before</strong><small data-i18n="chatCategory.opt2Hint">A complaint you discussed earlier</small></span>
+        </button>
+        <button type="button" class="option chat-cat-choice" data-cat="prescription" onclick="window.MGSelectChatCategory && window.MGSelectChatCategory('prescription')">
+          <span class="opt-mark" aria-hidden="true"></span>
+          <span class="option-text"><strong data-i18n="chatCategory.opt3">Repeat prescription</strong></span>
+        </button>
+        <button type="button" class="option chat-cat-choice" data-cat="results" onclick="window.MGSelectChatCategory && window.MGSelectChatCategory('results')">
+          <span class="opt-mark" aria-hidden="true"></span>
+          <span class="option-text"><strong data-i18n="chatCategory.opt4">Test results</strong></span>
+        </button>
+        <button type="button" class="option chat-cat-choice" data-cat="other" onclick="window.MGSelectChatCategory && window.MGSelectChatCategory('other')">
+          <span class="opt-mark" aria-hidden="true"></span>
+          <span class="option-text"><strong data-i18n="chatCategory.opt5">Something else</strong></span>
+        </button>
+      </div>
+      <div class="btn-row">
+        <button class="btn secondary grow" data-go="chat-type" data-i18n="nav.previous">Previous</button>
+        <button class="btn grow" id="chat-category-next" disabled data-i18n="nav.next" onclick="window.MGGoChatForm && window.MGGoChatForm()">Next</button>
       </div>
       <button class="link-back" data-go="home" data-i18n="back.home">Back to home</button>
     </section>
@@ -491,16 +563,31 @@
         <div class="field">
           <label for="chat-attachment" data-i18n="chatForm.attachmentLabel">3. Add a file or picture <span class="hint">(optional)</span></label>
           <input type="file" id="chat-attachment" accept="image/*,.pdf,.doc,.docx,.txt" />
-          <p class="file-instructions"><strong data-i18n="chatForm.attachmentStepLabel">Detailed instructions for this step:</strong><br><span data-i18n="chatForm.attachmentHint">- Press the "Choose File" button.<br>- Find the photo or document you want to send.<br>- Click on the photo or document once.<br>- Press "Open".<br>- The file name will appear next to the button.<br>- Continue with your message and press "Send my message".</span></p>
+          <p class="file-instructions"><strong data-i18n="chatForm.attachmentStepLabel">Detailed instructions for this step:</strong><br><span data-i18n="chatForm.attachmentHint">- Press the "Choose File" button.<br>- Find the photo or document you want to send.<br>- Click on the photo or document once.<br>- Press "Open".<br>- The file name will appear next to the button.<br>- Continue with your message and press "Review my question".</span></p>
         </div>
         <div class="notice info">
           <svg class="n-ico" aria-hidden="true" style="color:var(--teal-dark)"><use href="#i-info"/></svg>
           <span class="speakable" data-i18n="chatForm.reply">A doctor's assistant usually replies within 2 working days. Your answer will appear in this portal.</span>
         </div>
       </div>
-      <button class="btn block" id="btn-send-chat" data-i18n="chatForm.send">Send my question</button>
+      <button class="btn block" id="btn-send-chat" data-i18n="chatForm.review">Review my question</button>
       <p class="muted" id="chat-error" role="alert" style="display:none" data-i18n="chatForm.error">Please write your question before sending.</p>
-      <button class="link-back" data-go="chat-type" data-i18n="back.prev">Back to previous page</button>
+      <button class="link-back" data-go="chat-category" data-i18n="back.prev">Back to previous page</button>
+    </section>
+
+    <!-- ---------- CHAT: review ---------- -->
+    <section class="view" data-view="chat-review" aria-label="Check your question">
+      <h1 class="speakable" data-i18n="chatReview.title">Check your question</h1>
+      <hr class="section-rule" />
+      <div class="notice info">
+        <svg class="n-ico" aria-hidden="true" style="color:var(--teal-dark)"><use href="#i-info"/></svg>
+        <span class="speakable" data-i18n="chatReview.notice">This is an overview only — your question has not been sent yet.</span>
+      </div>
+      <div class="card" id="chat-review-summary"><!-- JS renders the summary here --></div>
+      <div class="btn-row">
+        <button class="btn secondary grow" id="chat-review-edit" data-go="chat-form" data-i18n="chatReview.edit">Edit my question</button>
+        <button class="btn grow" id="btn-confirm-chat" data-i18n="chatReview.confirmSend" onclick="window.MGSubmitChat && window.MGSubmitChat()">Confirm and send</button>
+      </div>
     </section>
 
     <!-- ---------- CHAT: confirmation ---------- -->
@@ -509,8 +596,9 @@
       <hr class="section-rule" />
       <div class="notice success">
         <svg class="n-ico" aria-hidden="true" style="color:var(--ok)"><use href="#i-check"/></svg>
-        <span class="speakable" data-i18n="chatConfirm.msg">Thank you. Your question has been sent to the practice. You will get an answer within 2 working days.</span>
+        <span class="speakable" data-i18n="chatConfirm.msg">Thank you. Your question has been sent to the practice.</span>
       </div>
+      <div class="card" id="chat-confirm-summary"></div>
       <button class="btn block" data-go="home" data-i18n="back.home">Back to home</button>
     </section>
 
@@ -609,6 +697,6 @@
     </div>
   </div>
 
-  <script src="js/app.js?v=20260619-meds2"></script>
+  <script src="js/app.js?v=20260628-flows7"></script>
 </body>
 </html>

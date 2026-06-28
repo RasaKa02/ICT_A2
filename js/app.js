@@ -42,13 +42,15 @@
       "help.appt-slots": "Choose a day first, then a time. Then press the big button to confirm your appointment.",
       "help.appt-confirm": "Well done! Your appointment has been made. You can go back to the homepage.",
       "help.meds-home": "Here you can order repeat medication. Press 'Order medicines' to start.",
-      "help.meds-what": "Choose which prescription medicine you want to order. Then press Next.",
+      "help.meds-what": "Choose which prescription medicine you want to order. If your medicine is not listed, or you are not sure, choose one of those options instead. Then press Next.",
       "help.meds-how": "Choose where you want to pick up the medicine. Then press Next.",
-      "help.meds-check": "Check your choices. If everything is correct, submit the order.",
-      "help.meds-confirm": "Your order has been sent. You can go back to the homepage.",
-      "help.chat-type": "Choose what you want to ask about. Press one of the two buttons.",
-      "help.chat-form": "Write your question in the text box. Then press the big button to send your question.",
-      "help.chat-confirm": "Your question has been sent. You will receive an answer within 2 working days.",
+      "help.meds-check": "Check your choices. This is only an overview — nothing has been sent yet. If everything is correct, submit the order.",
+      "help.meds-confirm": "Your order has been sent. You can see a summary below, and the phone number to call if something is wrong.",
+      "help.chat-type": "Choose whether you want to ask the GP or the pharmacy a question, or choose to make an appointment instead.",
+      "help.chat-category": "Choose the option that best describes what your question is about. Then press Next.",
+      "help.chat-form": "Write your question in the text box. Then press the button to review your question before sending it.",
+      "help.chat-review": "Check that everything is correct. Press Edit to change something, or press Confirm and send to send your question.",
+      "help.chat-confirm": "Your question has been sent. You can see by which date you will receive an answer.",
       "help.settings": "Here you can choose how you want to use the portal. Choose Standard or Guided view.",
       "chooser.title": "How would you like to use the portal?",
       "chooser.sub": "You can change this later in Settings.",
@@ -85,6 +87,9 @@
       "apptQ.backLink": "Back to the instruction page",
       "apptQ.complete": "Thank you for answering the questions. Click on the ‘Next’ button for your advice.",
       "apptAdvice.title": "Your personal advice",
+      "apptAdvice.notScheduledPrefix": "An appointment has not been scheduled yet. If you would like to schedule one, press the button",
+      "apptAdvice.notScheduledSuffix": "below.",
+      "apptAdvice.notScheduledUrgent": "An appointment has not been made yet. Please call the practice now using the number below.",
 
       "apptSlots.title": "Choose a day and a time",
       "apptSlots.day": "1. Choose a day", "apptSlots.time": "2. Choose a time",
@@ -125,11 +130,37 @@
       "meds.confirmTitle": "Your order has been sent",
       "meds.confirmMsg": "The practice will check your request. You will receive a message when your medicine is ready.",
       "meds.more": "Back to my medicines",
+      "meds.notSubmittedNotice": "This is only an overview — your order has not been sent yet.",
+      "meds.medOther": "My medicine is not in this list",
+      "meds.medOtherHint": "Tell us which medicine you mean",
+      "meds.medOtherInputLabel": "Which medicine do you need?",
+      "meds.medUnsure": "I'm not sure which medicine I need",
+      "meds.medUnsureHint": "The practice will contact you to discuss this",
+      "meds.usageTitle": "How to use this medicine",
+      "meds.usageSalbutamol": "Shake the inhaler well. Breathe out fully, put the mouthpiece in your mouth and breathe in slowly while pressing down once. Hold your breath for 10 seconds. Use only when needed, up to 8 puffs a day unless your GP says otherwise.",
+      "meds.usageLisinopril": "Take one tablet once a day, at the same time each day, with or without food. Swallow the tablet with a glass of water. Do not stop taking this medicine suddenly without talking to your GP.",
+      "meds.usageUnknown": "We will send you instructions for this medicine once your request has been checked.",
+      "meds.notOnList": "(not on the list)",
+      "meds.toDiscuss": "Not sure — to discuss with the practice",
+      "meds.confirmCallNote": "Made a mistake? Call us:",
 
       "chatType.title": "Ask the GP or pharmacy",
-      "chatType.lead": "What would you like to ask about?",
-      "chatType.new": "A new question or complaint<small>Something you have not discussed before</small>",
-      "chatType.known": "About something from before<small>A complaint you discussed earlier</small>",
+      "chatType.lead": "Who would you like to contact?",
+      "chatType.gp": "Ask the GP a question<small>Medical questions or complaints</small>",
+      "chatType.pharmacy": "Ask the pharmacy a question<small>Questions about your medicines</small>",
+      "chatType.apptOption": "I'd like to make an appointment instead<small>Skip the message — book a time directly</small>",
+      "chatType.urgent": "Is it urgent? Always call the practice. Call 112 for life-threatening situations.",
+      "chatType.callLabel": "Call the practice:",
+
+      "chatCategory.title": "What is your question about?",
+      "chatCategory.lead": "Choose the option that fits best.",
+      "chatCategory.opt1": "Ask a new question",
+      "chatCategory.opt1Hint": "Something you have not discussed before",
+      "chatCategory.opt2": "About something from before",
+      "chatCategory.opt2Hint": "A complaint you discussed earlier",
+      "chatCategory.opt3": "Repeat prescription",
+      "chatCategory.opt4": "Test results",
+      "chatCategory.opt5": "Something else",
 
       "chatForm.title": "Write your question",
       "chatForm.subjectLabel": "1. What is your question about? <span class=\"hint\">(a few words)</span>",
@@ -137,12 +168,26 @@
       "chatForm.messageLabel": "2. Write your question here <span class=\"hint\">(in your own words)</span>",
       "chatForm.attachmentLabel": "3. Add a file or picture <span class=\"hint\">(optional)</span>",
       "chatForm.attachmentStepLabel": "Detailed instructions for this step:",
-      "chatForm.attachmentHint": "- Press the \"Choose File\" button.<br>- Find the photo or document you want to send.<br>- Click on the photo or document once.<br>- Press \"Open\".<br>- The file name will appear next to the button.<br>- Continue with your message and press \"Send\".",
+      "chatForm.attachmentHint": "- Press the \"Choose File\" button.<br>- Find the photo or document you want to send.<br>- Click on the photo or document once.<br>- Press \"Open\".<br>- The file name will appear next to the button.<br>- Continue with your message and press \"Review my question\".",
       "chatForm.reply": "A doctor's assistant usually replies within 2 working days. Your answer will appear in this portal.",
-      "chatForm.send": "Send my question",
+      "chatForm.review": "Review my question",
       "chatForm.error": "Please write your question before sending.",
+
+      "chatReview.title": "Check your question",
+      "chatReview.notice": "This is an overview only — your question has not been sent yet.",
+      "chatReview.to": "To:", "chatReview.about": "About:",
+      "chatReview.subject": "Subject:", "chatReview.message": "Your question:",
+      "chatReview.attachment": "Attachment:",
+      "chatReview.noAttachment": "No file added",
+      "chatReview.noSubject": "Not provided",
+      "chatReview.edit": "Edit my question",
+      "chatReview.confirmSend": "Confirm and send",
+
+      "chatLabel.gp": "GP", "chatLabel.pharmacy": "Pharmacy",
+
       "chatConfirm.title": "Your question has been sent",
-      "chatConfirm.msg": "Thank you. Your question has been sent to the practice. You will get an answer within 2 working days.",
+      "chatConfirm.msg": "Thank you. Your question has been sent to the practice.",
+      "chatConfirm.replyBy": "You will receive a reply by:",
 
       "welcome.title": "Welcome to your health portal",
       "welcome.standard.intro": "This website is made easier to use. At the top of the website you can use <b>Read aloud</b> to hear text on the page.",
@@ -184,13 +229,15 @@
       "help.appt-slots": "Kies eerst een dag, en daarna een tijd. Druk dan op de grote knop om de afspraak te bevestigen.",
       "help.appt-confirm": "Gefeliciteerd! Uw afspraak is gemaakt. U kunt terugkeren naar de startpagina.",
       "help.meds-home": "Hier kunt u herhaalmedicatie bestellen. Druk op 'Medicijnen bestellen' om te beginnen.",
-      "help.meds-what": "Kies welk medicijn op recept u wilt bestellen. Druk daarna op Volgende.",
+      "help.meds-what": "Kies welk medicijn op recept u wilt bestellen. Staat uw medicijn er niet bij, of weet u het niet zeker? Kies dan een van die opties. Druk daarna op Volgende.",
       "help.meds-how": "Kies waar u het medicijn wilt ophalen. Druk daarna op Volgende.",
-      "help.meds-check": "Controleer uw keuzes. Klopt alles? Verstuur dan de bestelling.",
-      "help.meds-confirm": "Uw bestelling is verstuurd. U kunt teruggaan naar de startpagina.",
-      "help.chat-type": "Kies waarvoor u een vraag wilt stellen. Druk op één van de twee knoppen.",
-      "help.chat-form": "Schrijf uw vraag in het tekstvak. Druk daarna op de grote knop om uw vraag te versturen.",
-      "help.chat-confirm": "Uw vraag is verstuurd. U krijgt binnen 2 werkdagen een antwoord.",
+      "help.meds-check": "Controleer uw keuzes. Dit is alleen een overzicht — er is nog niets verstuurd. Klopt alles? Verstuur dan de bestelling.",
+      "help.meds-confirm": "Uw bestelling is verstuurd. Hieronder ziet u een overzicht en het telefoonnummer dat u kunt bellen als er iets niet klopt.",
+      "help.chat-type": "Kies of u een vraag wilt stellen aan de huisarts of de apotheek, of kies om in plaats daarvan een afspraak te maken.",
+      "help.chat-category": "Kies de optie die het beste past bij waar uw vraag over gaat. Druk daarna op Volgende.",
+      "help.chat-form": "Schrijf uw vraag in het tekstvak. Druk daarna op de knop om uw vraag te controleren voordat u die verstuurt.",
+      "help.chat-review": "Controleer of alles klopt. Druk op Wijzig om iets te veranderen, of druk op Bevestigen en versturen om uw vraag te versturen.",
+      "help.chat-confirm": "Uw vraag is verstuurd. U kunt zien voor welke datum u een antwoord krijgt.",
       "help.settings": "Hier kunt u kiezen hoe u het portaal wilt gebruiken. Kies Standaard of Begeleide weergave.",
       "chooser.title": "Hoe wilt u het portaal gebruiken?",
       "chooser.sub": "U kunt dit later wijzigen via Instellingen.",
@@ -227,6 +274,9 @@
       "apptQ.backLink": "Terug naar de instructiepagina",
       "apptQ.complete": "Bedankt voor het beantwoorden van de vragen. Klik op 'Volgende' voor uw advies.",
       "apptAdvice.title": "Uw persoonlijke advies",
+      "apptAdvice.notScheduledPrefix": "Er is nog geen afspraak ingepland. Wilt u een afspraak inplannen? Druk dan op de knop",
+      "apptAdvice.notScheduledSuffix": "hieronder.",
+      "apptAdvice.notScheduledUrgent": "Er is nog geen afspraak gemaakt. Bel nu de praktijk via het nummer hieronder.",
 
       "apptSlots.title": "Kies een dag en een tijd",
       "apptSlots.day": "1. Kies een dag", "apptSlots.time": "2. Kies een tijd",
@@ -267,11 +317,37 @@
       "meds.confirmTitle": "Uw bestelling is verstuurd",
       "meds.confirmMsg": "De praktijk controleert uw aanvraag. U krijgt een bericht wanneer uw medicijn klaarstaat.",
       "meds.more": "Terug naar mijn medicijnen",
+      "meds.notSubmittedNotice": "Dit is alleen een overzicht — uw bestelling is nog niet verstuurd.",
+      "meds.medOther": "Mijn medicijn staat niet in deze lijst",
+      "meds.medOtherHint": "Laat ons weten welk medicijn u bedoelt",
+      "meds.medOtherInputLabel": "Welk medicijn heeft u nodig?",
+      "meds.medUnsure": "Ik weet niet zeker welk medicijn ik nodig heb",
+      "meds.medUnsureHint": "De praktijk neemt contact met u op om dit te bespreken",
+      "meds.usageTitle": "Hoe gebruikt u dit medicijn",
+      "meds.usageSalbutamol": "Schud de inhalator goed. Adem volledig uit, plaats het mondstuk in uw mond en adem langzaam in terwijl u één keer indrukt. Houd uw adem 10 seconden in. Gebruik alleen wanneer nodig, maximaal 8 pufjes per dag, tenzij uw huisarts iets anders zegt.",
+      "meds.usageLisinopril": "Neem één keer per dag één tablet in, elke dag op hetzelfde moment, met of zonder voedsel. Slik de tablet door met een glas water. Stop niet plotseling met dit medicijn zonder dit met uw huisarts te overleggen.",
+      "meds.usageUnknown": "Zodra uw aanvraag is gecontroleerd, ontvangt u instructies voor dit medicijn.",
+      "meds.notOnList": "(niet op de lijst)",
+      "meds.toDiscuss": "Niet zeker — te bespreken met de praktijk",
+      "meds.confirmCallNote": "Foutje gemaakt? Bel ons:",
 
       "chatType.title": "Vraag aan huisarts of apotheek",
-      "chatType.lead": "Waar gaat uw vraag over?",
-      "chatType.new": "Een nieuwe vraag of klacht<small>Iets dat u nog niet besproken heeft</small>",
-      "chatType.known": "Over iets van eerder<small>Een klacht die u eerder besprak</small>",
+      "chatType.lead": "Met wie wilt u contact opnemen?",
+      "chatType.gp": "Stel een vraag aan de huisarts<small>Medische vragen of klachten</small>",
+      "chatType.pharmacy": "Stel een vraag aan de apotheek<small>Vragen over uw medicijnen</small>",
+      "chatType.apptOption": "Ik wil liever een afspraak maken<small>Geen bericht nodig — plan direct een tijd</small>",
+      "chatType.urgent": "Is het spoed? Bel altijd de praktijk. Bel 112 bij levensgevaar.",
+      "chatType.callLabel": "Bel de praktijk:",
+
+      "chatCategory.title": "Waar gaat uw vraag over?",
+      "chatCategory.lead": "Kies de optie die het beste past.",
+      "chatCategory.opt1": "Stel een nieuwe vraag",
+      "chatCategory.opt1Hint": "Iets dat u nog niet besproken heeft",
+      "chatCategory.opt2": "Over iets van eerder",
+      "chatCategory.opt2Hint": "Een klacht die u eerder besprak",
+      "chatCategory.opt3": "Herhaalrecept",
+      "chatCategory.opt4": "Uitslag onderzoek",
+      "chatCategory.opt5": "Iets anders",
 
       "chatForm.title": "Schrijf uw vraag",
       "chatForm.subjectLabel": "1. Waar gaat uw vraag over? <span class=\"hint\">(een paar woorden)</span>",
@@ -279,12 +355,26 @@
       "chatForm.messageLabel": "2. Schrijf hier uw vraag <span class=\"hint\">(in uw eigen woorden)</span>",
       "chatForm.attachmentLabel": "3. Voeg een bestand of foto toe <span class=\"hint\">(optioneel)</span>",
       "chatForm.attachmentStepLabel": "Gedetailleerde instructies voor deze stap:",
-      "chatForm.attachmentHint": "- Druk op de knop \"Bestand kiezen\".<br>- Zoek de foto of het document dat u wilt versturen.<br>- Klik eenmaal op de foto of het document.<br>- Druk op \"Open\".<br>- De bestandsnaam verschijnt naast de knop.<br>- Ga verder met uw bericht en druk op \"Verstuur\".",
+      "chatForm.attachmentHint": "- Druk op de knop \"Bestand kiezen\".<br>- Zoek de foto of het document dat u wilt versturen.<br>- Klik eenmaal op de foto of het document.<br>- Druk op \"Open\".<br>- De bestandsnaam verschijnt naast de knop.<br>- Ga verder met uw bericht en druk op \"Bekijk mijn vraag\".",
       "chatForm.reply": "Een doktersassistent reageert meestal binnen 2 werkdagen. Uw antwoord verschijnt in dit portaal.",
-      "chatForm.send": "Verstuur mijn vraag",
+      "chatForm.review": "Bekijk mijn vraag",
       "chatForm.error": "Schrijf eerst uw vraag voordat u verstuurt.",
+
+      "chatReview.title": "Controleer uw vraag",
+      "chatReview.notice": "Dit is alleen een overzicht — uw vraag is nog niet verstuurd.",
+      "chatReview.to": "Aan:", "chatReview.about": "Over:",
+      "chatReview.subject": "Onderwerp:", "chatReview.message": "Uw vraag:",
+      "chatReview.attachment": "Bijlage:",
+      "chatReview.noAttachment": "Geen bestand toegevoegd",
+      "chatReview.noSubject": "Niet ingevuld",
+      "chatReview.edit": "Wijzig mijn vraag",
+      "chatReview.confirmSend": "Bevestigen en versturen",
+
+      "chatLabel.gp": "Huisarts", "chatLabel.pharmacy": "Apotheek",
+
       "chatConfirm.title": "Uw vraag is verstuurd",
-      "chatConfirm.msg": "Dank u wel. Uw vraag is naar de praktijk verstuurd. U krijgt binnen 2 werkdagen antwoord.",
+      "chatConfirm.msg": "Dank u wel. Uw vraag is naar de praktijk verstuurd.",
+      "chatConfirm.replyBy": "U ontvangt antwoord vóór:",
 
       "welcome.title": "Welkom bij uw gezondheidsportaal",
       "welcome.standard.intro": "Deze website is makkelijker gemaakt in gebruik. Bovenaan de website kunt u <b>Voorlezen</b> gebruiken om tekst op de pagina te horen.",
@@ -356,7 +446,7 @@
         tips: ["Take enough rest and drink plenty of water.",
                "Watch how you feel over the next few days.",
                "If the complaint gets worse or lasts longer, contact the practice."],
-        cta: "I would still like an appointment" }
+        cta: "Schedule an appointment" }
     },
     nl: {
       urgent: { title: "Bel nu uw huisarts",
@@ -370,7 +460,7 @@
         tips: ["Neem voldoende rust en drink genoeg water.",
                "Let de komende dagen op hoe u zich voelt.",
                "Wordt de klacht erger of duurt het langer? Neem dan contact op met de praktijk."],
-        cta: "Ik wil toch graag een afspraak" }
+        cta: "Afspraak inplannen" }
     }
   };
 
@@ -441,12 +531,25 @@
         { sel: "[data-view='meds-confirm'] .notice", t: "Your order has been sent to the practice." },
         { sel: "[data-view='meds-confirm'] .btn[data-go='home']", t: "Return to the homepage when you are done." }
       ],
+      "chat-type": [
+        { sel: "#chat-recipient-gp", t: "To ask your GP a question, select this button." },
+        { sel: "#chat-recipient-pharmacy", t: "To ask the pharmacy a question, select this button." },
+        { sel: "#chat-type-urgent", t: "If your question is urgent, always call the practice instead of sending a message." }
+      ],
+      "chat-category": [
+        { sel: "#chat-category-options", t: "Choose the option that best describes what your question is about." },
+        { sel: "#chat-category-next", t: "After choosing an option, press Next." }
+      ],
       "chat-form": [
         { sel: "#chat-subject", t: "First, type what your question is about in a few words." },
         { sel: ".example-chips", t: "Not sure? Tap one of these examples to fill it in." },
         { sel: "#chat-message", t: "Then write your question here in your own words." },
         { sel: "#chat-attachment", t: "If you want, click Choose File and select a picture or document to send with your question." },
-        { sel: "#btn-send-chat", t: "Finally, press this button to send it to the practice." }
+        { sel: "#btn-send-chat", t: "Finally, press this button to review your question before sending it." }
+      ],
+      "chat-review": [
+        { sel: "#chat-review-summary", t: "Check that everything is correct before sending." },
+        { sel: "#btn-confirm-chat", t: "If everything is correct, press this button to send your question." }
       ]
     },
     nl: {
@@ -507,12 +610,25 @@
         { sel: "[data-view='meds-confirm'] .notice", t: "Uw bestelling is naar de praktijk verstuurd." },
         { sel: "[data-view='meds-confirm'] .btn[data-go='home']", t: "Ga terug naar de startpagina wanneer u klaar bent." }
       ],
+      "chat-type": [
+        { sel: "#chat-recipient-gp", t: "Wilt u een vraag stellen aan de huisarts? Kies dan deze knop." },
+        { sel: "#chat-recipient-pharmacy", t: "Wilt u een vraag stellen aan de apotheek? Kies dan deze knop." },
+        { sel: "#chat-type-urgent", t: "Is uw vraag spoedeisend? Bel dan altijd de praktijk in plaats van een bericht te sturen." }
+      ],
+      "chat-category": [
+        { sel: "#chat-category-options", t: "Kies de optie die het beste past bij waar uw vraag over gaat." },
+        { sel: "#chat-category-next", t: "Heeft u een optie gekozen? Druk op Volgende." }
+      ],
       "chat-form": [
         { sel: "#chat-subject", t: "Typ eerst in een paar woorden waar uw vraag over gaat." },
         { sel: ".example-chips", t: "Weet u het niet zeker? Tik op een voorbeeld om het in te vullen." },
         { sel: "#chat-message", t: "Schrijf daarna uw vraag in uw eigen woorden." },
         { sel: "#chat-attachment", t: "Als u wilt, klik op Bestand kiezen en selecteer een foto of document om mee te sturen." },
-        { sel: "#btn-send-chat", t: "Druk tot slot op deze knop om naar de praktijk te sturen." }
+        { sel: "#btn-send-chat", t: "Druk tot slot op deze knop om uw vraag te controleren voordat u die verstuurt." }
+      ],
+      "chat-review": [
+        { sel: "#chat-review-summary", t: "Controleer of alles klopt voordat u verstuurt." },
+        { sel: "#btn-confirm-chat", t: "Klopt alles? Druk dan op deze knop om uw vraag te versturen." }
       ]
     }
   };
@@ -528,7 +644,8 @@
   };
   var qIndex = 0, qAnswers = [];
   var chosenDay = null, chosenTime = null;
-  var chosenMedicine = null, chosenPickup = null;
+  var chosenMedicine = null, chosenPickup = null, chosenMedicineOther = "";
+  var chosenChatRecipient = null, chosenChatCategory = null;
 
   var $ = function (s, root) { return (root || document).querySelector(s); };
   var $$ = function (s, root) { return Array.prototype.slice.call((root || document).querySelectorAll(s)); };
@@ -569,6 +686,9 @@
     if (name === "appt-advice") renderAdvice();
     if (name === "appt-slots") renderSlots();
     if (name === "meds-check") renderMedicineCheck();
+    if (name === "meds-confirm") renderMedicineConfirm();
+    if (name === "chat-review") renderChatReview();
+    if (name === "chat-confirm") renderChatConfirm();
     window.scrollTo(0, 0);
     var active = $('.view[data-view="' + name + '"]');
     refreshSpeakButtons();
@@ -776,7 +896,15 @@
     var kind = computeAdvice();
     var a = ADVICE[state.lang][kind];
     var box = $("#appt-advice-content");
-    var html = '<div class="notice ' + (kind === "urgent" ? "warn" : kind === "book" ? "info" : "success") + '">' +
+    var html = "";
+    if (a.cta) {
+      html += '<p class="speakable muted">' + escapeHtml(t("apptAdvice.notScheduledPrefix")) +
+        ' <strong>&quot;' + escapeHtml(a.cta) + '&quot;</strong> ' +
+        escapeHtml(t("apptAdvice.notScheduledSuffix")) + "</p>";
+    } else if (kind === "urgent") {
+      html += '<p class="speakable muted">' + escapeHtml(t("apptAdvice.notScheduledUrgent")) + "</p>";
+    }
+    html += '<div class="notice ' + (kind === "urgent" ? "warn" : kind === "book" ? "info" : "success") + '">' +
       '<svg class="n-ico" aria-hidden="true"><use href="#i-' + (kind === "urgent" ? "warn" : kind === "book" ? "info" : "check") + '"/></svg>' +
       '<div><strong class="speakable">' + escapeHtml(a.title) + "</strong>" +
       '<p class="speakable" style="margin:.4rem 0 0">' + escapeHtml(a.body) + "</p></div></div>";
@@ -785,11 +913,14 @@
       a.tips.forEach(function (tip) { html += '<li class="speakable">' + escapeHtml(tip) + "</li>"; });
       html += "</ul></div>";
     }
-    if (kind === "urgent") {
-      html += '<div class="call-hatch"><svg class="n-ico" aria-hidden="true" style="color:var(--magenta)"><use href="#i-phone"/></svg>' +
-        '<span class="speakable">' + (state.lang === "nl" ? "Bel de praktijk:" : "Call the practice:") + '</span>' +
-        '<a href="tel:0725613913">072-561 3913</a></div>';
-    }
+    var callText = kind === "urgent"
+      ? (state.lang === "nl" ? "Bel de praktijk:" : "Call the practice:")
+      : kind === "book"
+      ? (state.lang === "nl" ? "Vragen? Bel de praktijk:" : "Questions? Call the practice:")
+      : (state.lang === "nl" ? "Toch liever bellen? Bel de praktijk:" : "Prefer to call instead? Call the practice:");
+    html += '<div class="call-hatch"><svg class="n-ico" aria-hidden="true" style="color:var(--magenta)"><use href="#i-phone"/></svg>' +
+      '<span class="speakable">' + callText + '</span>' +
+      '<a href="tel:0725613913">072-561 3913</a></div>';
     if (a.cta) {
       html += '<button class="btn block" id="btn-to-slots" style="margin-top:1rem">' + escapeHtml(a.cta) + "</button>";
     }
@@ -823,7 +954,11 @@
 
   /* ---------------- Medicines order flow ---------------- */
   function medicineLabel(id) {
-    return id === "salbutamol" ? t("meds.med1") : id === "lisinopril" ? t("meds.med2") : "";
+    if (id === "salbutamol") return t("meds.med1");
+    if (id === "lisinopril") return t("meds.med2");
+    if (id === "other") return (chosenMedicineOther || "").trim() + " " + t("meds.notOnList");
+    if (id === "unsure") return t("meds.toDiscuss");
+    return "";
   }
   function pickupLabel(id) {
     if (id === "koedijk") return t("meds.pickup1") + " - " + t("meds.pickup1d");
@@ -831,12 +966,33 @@
     if (id === "gp") return t("meds.pickup3") + " - " + t("meds.pickup3d");
     return "";
   }
+  function renderMedicineUsage(id) {
+    var box = $("#meds-usage-instructions");
+    if (!box) return;
+    if (!id) { box.style.display = "none"; box.innerHTML = ""; return; }
+    var body = id === "salbutamol" ? t("meds.usageSalbutamol")
+             : id === "lisinopril" ? t("meds.usageLisinopril")
+             : t("meds.usageUnknown");
+    box.style.display = "block";
+    box.innerHTML = '<h2 class="speakable">' + escapeHtml(t("meds.usageTitle")) + "</h2>" +
+      '<p class="speakable">' + escapeHtml(body) + "</p>";
+    refreshSpeakButtons();
+  }
+  function updateMedsWhatNext() {
+    var ok = !!chosenMedicine;
+    if (chosenMedicine === "other") ok = !!(chosenMedicineOther && chosenMedicineOther.trim());
+    $("#meds-what-next").disabled = !ok;
+  }
   function selectMedicine(id) {
     chosenMedicine = id;
     $$(".med-choice").forEach(function (b) {
       b.classList.toggle("selected", b.getAttribute("data-med") === id);
     });
-    $("#meds-what-next").disabled = !chosenMedicine;
+    var otherField = $("#meds-other-field");
+    if (otherField) otherField.style.display = id === "other" ? "block" : "none";
+    if (id !== "other") chosenMedicineOther = "";
+    renderMedicineUsage(id);
+    updateMedsWhatNext();
   }
   function selectPickup(id) {
     chosenPickup = id;
@@ -846,7 +1002,7 @@
     $("#meds-how-next").disabled = !chosenPickup;
   }
   function goMedicineHow() {
-    if (chosenMedicine) showView("meds-how");
+    if (!$("#meds-what-next").disabled) showView("meds-how");
   }
   function goMedicineCheck() {
     if (chosenPickup) showView("meds-check");
@@ -857,9 +1013,15 @@
   function resetMedicineOrder() {
     chosenMedicine = null;
     chosenPickup = null;
+    chosenMedicineOther = "";
     $$(".med-choice, .pickup-choice").forEach(function (b) { b.classList.remove("selected"); });
     $("#meds-what-next").disabled = true;
     $("#meds-how-next").disabled = true;
+    var otherField = $("#meds-other-field");
+    if (otherField) otherField.style.display = "none";
+    var otherInput = $("#meds-other-input");
+    if (otherInput) otherInput.value = "";
+    renderMedicineUsage(null);
   }
   function renderMedicineCheck() {
     var box = $("#meds-check-summary");
@@ -875,12 +1037,102 @@
       escapeHtml(pickupLabel(chosenPickup)) + "</p>";
     refreshSpeakButtons();
   }
+  function renderMedicineConfirm() {
+    var box = $("#meds-confirm-summary");
+    if (!box) return;
+    if (!chosenMedicine || !chosenPickup) { box.innerHTML = ""; return; }
+    box.innerHTML =
+      '<p class="speakable"><strong>' + escapeHtml(t("meds.summaryMedicine")) + "</strong> " +
+      escapeHtml(medicineLabel(chosenMedicine)) + "</p>" +
+      '<p class="speakable"><strong>' + escapeHtml(t("meds.summaryPickup")) + "</strong> " +
+      escapeHtml(pickupLabel(chosenPickup)) + "</p>";
+    refreshSpeakButtons();
+  }
 
   window.MGSelectMedicine = selectMedicine;
   window.MGSelectPickup = selectPickup;
   window.MGGoMedicineHow = goMedicineHow;
   window.MGGoMedicineCheck = goMedicineCheck;
   window.MGSubmitMedicine = submitMedicine;
+
+  /* ---------------- Chat (ask the GP / pharmacy) flow ---------------- */
+  var CHAT_CATEGORY_KEYS = {
+    "new": "chatCategory.opt1", before: "chatCategory.opt2",
+    prescription: "chatCategory.opt3", results: "chatCategory.opt4", other: "chatCategory.opt5"
+  };
+  function chatRecipientLabel(rec) {
+    return rec === "pharmacy" ? t("chatLabel.pharmacy") : t("chatLabel.gp");
+  }
+  function chatCategoryLabel(cat) {
+    return t(CHAT_CATEGORY_KEYS[cat] || "chatCategory.opt5");
+  }
+  function computeReplyByDate() {
+    var d = new Date();
+    var added = 0;
+    while (added < 2) {
+      d.setDate(d.getDate() + 1);
+      var day = d.getDay();
+      if (day !== 0 && day !== 6) added++;
+    }
+    var locale = state.lang === "nl" ? "nl-NL" : "en-GB";
+    return d.toLocaleDateString(locale, { weekday: "long", day: "numeric", month: "long" });
+  }
+  function selectChatRecipient(rec) {
+    chosenChatRecipient = rec;
+    showView("chat-category");
+  }
+  function selectChatCategory(cat) {
+    chosenChatCategory = cat;
+    $$(".chat-cat-choice").forEach(function (b) {
+      b.classList.toggle("selected", b.getAttribute("data-cat") === cat);
+    });
+    $("#chat-category-next").disabled = false;
+  }
+  function goChatForm() {
+    if (chosenChatCategory) showView("chat-form");
+  }
+  function resetChatFlow() {
+    chosenChatRecipient = null;
+    chosenChatCategory = null;
+    $$(".chat-cat-choice").forEach(function (b) { b.classList.remove("selected"); });
+    var next = $("#chat-category-next");
+    if (next) next.disabled = true;
+  }
+  function renderChatReview() {
+    var box = $("#chat-review-summary");
+    if (!box) return;
+    var subject = $("#chat-subject").value.trim();
+    var message = $("#chat-message").value.trim();
+    var files = $("#chat-attachment").files;
+    var fileName = files && files[0] ? files[0].name : "";
+    box.innerHTML =
+      '<p class="speakable"><strong>' + escapeHtml(t("chatReview.to")) + "</strong> " + escapeHtml(chatRecipientLabel(chosenChatRecipient)) + "</p>" +
+      '<p class="speakable"><strong>' + escapeHtml(t("chatReview.about")) + "</strong> " + escapeHtml(chatCategoryLabel(chosenChatCategory)) + "</p>" +
+      '<p class="speakable"><strong>' + escapeHtml(t("chatReview.subject")) + "</strong> " + escapeHtml(subject || t("chatReview.noSubject")) + "</p>" +
+      '<p class="speakable"><strong>' + escapeHtml(t("chatReview.message")) + "</strong> " + escapeHtml(message) + "</p>" +
+      '<p class="speakable"><strong>' + escapeHtml(t("chatReview.attachment")) + "</strong> " + escapeHtml(fileName || t("chatReview.noAttachment")) + "</p>";
+    refreshSpeakButtons();
+  }
+  function renderChatConfirm() {
+    var box = $("#chat-confirm-summary");
+    if (!box) return;
+    box.innerHTML =
+      '<p class="speakable"><strong>' + escapeHtml(t("chatReview.to")) + "</strong> " + escapeHtml(chatRecipientLabel(chosenChatRecipient)) + "</p>" +
+      '<p class="speakable"><strong>' + escapeHtml(t("chatReview.about")) + "</strong> " + escapeHtml(chatCategoryLabel(chosenChatCategory)) + "</p>" +
+      '<p class="speakable"><strong>' + escapeHtml(t("chatConfirm.replyBy")) + "</strong> " + escapeHtml(computeReplyByDate()) + "</p>";
+    refreshSpeakButtons();
+  }
+  function submitChat() {
+    $("#chat-subject").value = "";
+    $("#chat-message").value = "";
+    $("#chat-attachment").value = "";
+    showView("chat-confirm");
+  }
+
+  window.MGSelectChatRecipient = selectChatRecipient;
+  window.MGSelectChatCategory = selectChatCategory;
+  window.MGGoChatForm = goChatForm;
+  window.MGSubmitChat = submitChat;
 
   /* ---------------- Guided tour ---------------- */
   var tour = { steps: [], i: 0, active: false, speak: false };
@@ -989,6 +1241,7 @@
       var nav = e.target.closest("[data-go]");
       if (nav) {
         if (nav.id === "meds-order-btn") resetMedicineOrder();
+        if (nav.id === "tile-chat" || nav.id === "gtile-chat") resetChatFlow();
         showView(nav.getAttribute("data-go"));
         return;
       }
@@ -1010,7 +1263,11 @@
         if (active === "appt-q") renderQuestion();
         if (active === "appt-advice") renderAdvice();
         if (active === "appt-slots") renderSlots();
+        if (active === "meds-what") renderMedicineUsage(chosenMedicine);
         if (active === "meds-check") renderMedicineCheck();
+        if (active === "meds-confirm") renderMedicineConfirm();
+        if (active === "chat-review") renderChatReview();
+        if (active === "chat-confirm") renderChatConfirm();
       });
     });
 
@@ -1072,6 +1329,10 @@
     $("#meds-submit").addEventListener("click", function () {
       submitMedicine();
     });
+    $("#meds-other-input").addEventListener("input", function () {
+      chosenMedicineOther = this.value;
+      updateMedsWhatNext();
+    });
 
     // chat example chips
     $$(".example-chips").forEach(function (group) {
@@ -1084,16 +1345,13 @@
       });
     });
 
-    // chat send (with validation)
+    // chat: review (with validation), then confirm-and-send is wired via MGSubmitChat
     $("#btn-send-chat").addEventListener("click", function () {
       var msg = $("#chat-message").value.trim();
       var err = $("#chat-error");
       if (!msg) { err.style.display = "block"; $("#chat-message").focus(); return; }
       err.style.display = "none";
-      $("#chat-subject").value = "";
-      $("#chat-message").value = "";
-      $("#chat-attachment").value = "";
-      showView("chat-confirm");
+      showView("chat-review");
     });
 
     // login / view-chooser / logout
@@ -1231,8 +1489,10 @@
       "meds-how":      function() { return "#meds-how-next"; },
       "meds-check":    function() { return "#meds-submit"; },
       "meds-confirm":  function() { return ".btn[data-go='home']"; },
-      "chat-type":     function() { return ".action-btn:not(.ghost)"; },
+      "chat-type":     function() { return "#chat-recipient-gp"; },
+      "chat-category": function() { return "#chat-category-next"; },
       "chat-form":     function() { return "#btn-send-chat"; },
+      "chat-review":   function() { return "#btn-confirm-chat"; },
       "chat-confirm":  function() { return ".btn[data-go='home']"; },
       "settings":      function() { return ".chooser-opt"; }
     };

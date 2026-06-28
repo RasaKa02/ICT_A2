@@ -18,21 +18,30 @@ redesigned so **elderly users** can independently complete core healthcare tasks
 ## The 3 use cases
 1. **Make an appointment:**  the original portal's hostile 10+ question questionnaire is redesigned
    into a guided, *one-question-per-screen* flow that ends in **personalised advice** (call now /
-   book an appointment / self-care), with an appointment day+time picker.
-2. **Order medicines:** request repeat medication through a what/how/check flow.
-3. **Ask the GP / chat with the doctor:** a simplified guided message form with example prompts.
+   book an appointment / self-care) and always shows the practice's phone number, with an
+   appointment day+time picker. An appointment can also be booked directly from the "Ask the GP /
+   pharmacy" entry point, for users who'd rather not write a message.
+2. **Order medicines:** request repeat medication through a what/how/check flow. The medicine
+   step also covers "my medicine isn't on this list" and "I'm not sure which medicine I need",
+   shows plain-language usage instructions, and makes clear the check step is an overview only
+   (nothing is sent until you submit).
+3. **Ask the GP / pharmacy:** asking the GP and asking the pharmacy are separate starting choices,
+   followed by a topic picker, a guided message form, and a review step before anything is sent.
 
 **For clarity, what can actually be done in this prototype:**
 - Make an appointment: open the "Make and view appointments" tile → Start the questions → answer
-  the short questionnaire (guided or standard view) → see personalised advice → (if needed)
-  choose a day and time and confirm. The app shows a confirmation screen with the appointment
-  summary.
+  the short questionnaire (guided or standard view) → see personalised advice (with a phone number
+  shown regardless of outcome) → (if needed) choose a day and time and confirm. The app shows a
+  confirmation screen with the appointment summary.
 - Order medicines: open "My medicines" → choose "Order medicines" → choose a prescription
-  medicine → choose where to pick it up → check the summary → submit the order. The app shows a
-  confirmation page with a summary of the choices and a submit button. 
-- Ask the GP: open "Ask the GP" → choose question type → write a short subject and message →
-  optionally attach a file → press "Send my question" → confirmation screen shown. (No backend
-  delivery; this is a prototype flow.)
+  medicine (or "not in this list" / "not sure") → see how to use it → choose where to pick it up →
+  check the summary (clearly marked as not yet sent) → submit the order. The app shows a
+  confirmation page with a summary of the choices and a phone number to call about mistakes.
+- Ask the GP / pharmacy: open "Ask the GP / pharmacy" → choose GP or pharmacy (or make an
+  appointment instead) → choose what the question is about → write a subject and message →
+  optionally attach a file → review everything on a check screen → "Confirm and send" →
+  confirmation screen with a concrete reply-by date. (No backend delivery; this is a prototype
+  flow.)
 
 (Note that the sign in part is just there for display, you can put in any name and it will work)
 
@@ -71,7 +80,7 @@ escape hatch on screens that might be difficult to complete.
 | `home` | Dashboard / entry point |
 | `appt-landing` → `appt-intro` → `appt-q` → `appt-advice` → `appt-slots` → `appt-confirm` | Task 1: appointment |
 | `meds-home` → `meds-what` → `meds-how` → `meds-check` → `meds-confirm` | Task 2: order medicines |
-| `chat-type` → `chat-form` → `chat-confirm` | Task 3: ask the GP |
+| `chat-type` → `chat-category` → `chat-form` → `chat-review` → `chat-confirm` | Task 3: ask the GP / pharmacy |
 
 ## Files
 - `index.html` — all screens as inline `<section data-view>` views + the SVG icon sprite.
