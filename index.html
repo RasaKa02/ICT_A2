@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MijnGezondheid.net — toegankelijk / accessible</title>
-  <link rel="stylesheet" href="css/styles.css?v=20260628-multi1" />
+  <link rel="stylesheet" href="css/styles.css?v=20260628-a11y2" />
 </head>
 <body>
 
@@ -35,14 +35,14 @@
   <div class="a11y-bar" role="region" aria-label="Accessibility options">
     <button type="button" id="btn-readaloud" aria-pressed="false">
       <svg aria-hidden="true" width="18" height="18"><use href="#i-speaker"/></svg>
-      <span data-i18n="bar.readaloud">Read aloud</span>
+      <span data-i18n="bar.readaloud">Accessibility tools</span>
     </button>
     <button type="button" id="btn-tour" data-i18n="bar.tour">Step by step instructions</button>
+    <button type="button" id="btn-stoptour" class="sr-only" data-i18n="bar.stoptour">Stop step-by-step instructions</button>
     <button type="button" id="btn-notes" aria-pressed="false">
       <svg aria-hidden="true" width="18" height="18"><use href="#i-pin"/></svg>
       <span data-i18n="bar.notes">Show change notes</span>
     </button>
-    <button type="button" id="btn-stopspeak" class="sr-only" data-i18n="bar.stopspeak">Stop reading</button>
   </div>
 
 
@@ -110,10 +110,19 @@
 
     <!-- ---------- HOME ---------- -->
     <section class="view is-active" data-view="home" aria-label="Home">
+      <div class="sticky-note">
+        <span class="note-pin" aria-hidden="true">📌</span>
+        <span data-i18n="note.a11yBar">"Read aloud" was renamed to "Accessibility tools" to better describe the feature. The previous "Stop reading" button was removed because it did not stop the reading properly. Users can now turn the accessibility tools on or off with one button. A new "Stop step-by-step instructions" button was added to immediately stop the guided instructions.</span>
+      </div>
+      <div class="sticky-note">
+        <span class="note-pin" aria-hidden="true">📌</span>
+        <span data-i18n="note.homeSubheaders">Added short subheaders to the "Make appointment" and "Ask GP/Pharmacy" cards.</span>
+      </div>
       <div class="tiles">
         <button class="tile" data-go="appt-landing" id="tile-appt">
           <svg class="tile-ico" aria-hidden="true"><use href="#i-calendar"/></svg>
           <span data-i18n="tile.appt">Make and view appointments</span>
+          <small class="tile-hint" data-i18n="tile.apptHint">Book a new appointment or view upcoming ones</small>
         </button>
         <button class="tile" data-go="meds-home" id="tile-meds">
           <svg class="tile-ico" aria-hidden="true"><use href="#i-pills"/></svg>
@@ -123,6 +132,7 @@
           <span class="tile-badge">2</span>
           <svg class="tile-ico" aria-hidden="true"><use href="#i-chat"/></svg>
           <span data-i18n="tile.chat">Ask the GP / pharmacy</span>
+          <small class="tile-hint" data-i18n="tile.chatHint">Send a question to your GP or pharmacy</small>
         </button>
         <button class="tile" disabled id="tile-files">
           <svg class="tile-ico" aria-hidden="true"><use href="#i-file"/></svg>
@@ -153,7 +163,10 @@
         <div class="guided-main-tiles">
           <button class="guided-tile" data-go="appt-landing" id="gtile-appt">
             <svg class="guided-ico" aria-hidden="true"><use href="#i-calendar"/></svg>
-            <span data-i18n="tile.appt">Afspraak maken en bekijken</span>
+            <span class="guided-tile-text">
+              <span data-i18n="tile.appt">Afspraak maken en bekijken</span>
+              <small data-i18n="tile.apptHint">Maak een nieuwe afspraak of bekijk uw komende afspraken</small>
+            </span>
           </button>
           <button class="guided-tile" data-go="meds-home" id="gtile-meds">
             <svg class="guided-ico" aria-hidden="true"><use href="#i-pills"/></svg>
@@ -162,7 +175,10 @@
           <button class="guided-tile" data-go="chat-type" id="gtile-chat">
             <span class="guided-badge">2</span>
             <svg class="guided-ico" aria-hidden="true"><use href="#i-chat"/></svg>
-            <span data-i18n="tile.chat">Vraag aan huisarts / apotheek</span>
+            <span class="guided-tile-text">
+              <span data-i18n="tile.chat">Vraag aan huisarts / apotheek</span>
+              <small data-i18n="tile.chatHint">Stuur een vraag naar uw huisarts of apotheek</small>
+            </span>
           </button>
           <button class="guided-tile" disabled id="gtile-files">
             <svg class="guided-ico" aria-hidden="true"><use href="#i-file"/></svg>
@@ -194,6 +210,10 @@
     <section class="view" data-view="appt-landing" aria-label="Appointments">
       <h1 class="speakable" data-i18n="apptLanding.title">Make and view appointments</h1>
       <hr class="section-rule" />
+      <div class="sticky-note">
+        <span class="note-pin" aria-hidden="true">📌</span>
+        <span data-i18n="note.apptLanding">Added a link in the "Make appointment" section for users who decide they want to ask the GP or pharmacy a question instead. This matches the existing link in the "Ask GP/Pharmacy" section and makes it easier to switch between the two tasks.</span>
+      </div>
       <div class="action-grid">
         <button class="action-btn" data-go="appt-intro" id="appt-make-btn">
           <svg class="ab-ico" aria-hidden="true"><use href="#i-calendar"/></svg>
@@ -202,6 +222,12 @@
         <button class="action-btn ghost" disabled id="appt-history-btn">
           <svg class="ab-ico" aria-hidden="true"><use href="#i-history"/></svg>
           <span data-i18n="apptLanding.history">View past appointments</span>
+        </button>
+      </div>
+      <div class="action-grid">
+        <button class="action-btn ghost" data-go="chat-type" id="appt-chat-link">
+          <svg class="ab-ico" aria-hidden="true"><use href="#i-chat"/></svg>
+          <span data-i18n="apptLanding.chatOption">I'd like to ask a question instead<small>If you would like to ask the GP or pharmacy a question instead, click here</small></span>
         </button>
       </div>
       <h2 data-i18n="apptLanding.upcoming">Your upcoming appointments</h2>
@@ -734,6 +760,6 @@
     </div>
   </div>
 
-  <script src="js/app.js?v=20260628-multi7"></script>
+  <script src="js/app.js?v=20260628-a11y2"></script>
 </body>
 </html>

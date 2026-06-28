@@ -12,8 +12,9 @@
   var I18N = {
     en: {
       "bar.language": "Language", "bar.textsize": "Text size",
-      "bar.contrast": "High contrast", "bar.readaloud": "Read aloud",
-      "bar.tour": "Step by step instructions", "bar.stopspeak": "Stop reading",
+      "bar.contrast": "High contrast", "bar.readaloud": "Accessibility tools",
+      "bar.readaloudAction": "Read aloud",
+      "bar.tour": "Step by step instructions", "bar.stoptour": "Stop step-by-step instructions",
       "bar.notes": "Show change notes",
       "loggedin": "You are logged in as:",
       "banner.offeredby": "Offered by:",
@@ -36,7 +37,7 @@
       "settings.modeDesc": "Choose how you would like to use the portal.",
       "settings.currentMode": "Current mode",
       "help.home": "This is your homepage. Choose one of the large buttons to continue. You can make an appointment, request medicines, or ask your GP a question.",
-      "help.appt-landing": "Here you can make a new appointment or view your upcoming appointments. Press 'Make an appointment' to start.",
+      "help.appt-landing": "Here you can make a new appointment or view your upcoming appointments. Press 'Make an appointment' to start. If you'd rather ask a question, you can switch to that instead.",
       "help.appt-intro": "Your GP wants you to answer a few questions first. Press the button to start the questions.",
       "help.appt-q": "Answer the question by pressing one of the options. Then press 'Next' to continue.",
       "help.appt-advice": "This is our advice for you. Read it carefully. Then press the button to continue.",
@@ -63,7 +64,9 @@
 
       "home.title": "My health",
       "tile.appt": "Make and view appointments", "tile.medicines": "My medicines",
+      "tile.apptHint": "Book a new appointment or view upcoming ones",
       "tile.chat": "Ask the GP / pharmacy",
+      "tile.chatHint": "Send a question to your GP or pharmacy",
       "tile.file": "My file",
       "tile.paths": "My care paths", "tile.details": "GP / pharmacy details",
       "tile.news": "News", "tile.settings": "Settings",
@@ -74,6 +77,7 @@
       "apptLanding.title": "Make and view appointments",
       "apptLanding.make": "Make an appointment",
       "apptLanding.history": "View past appointments",
+      "apptLanding.chatOption": "I'd like to ask a question instead<small>If you would like to ask the GP or pharmacy a question instead, click here</small>",
       "apptLanding.upcoming": "Your upcoming appointments",
       "apptLanding.none": "No upcoming appointments have been found for you.",
 
@@ -205,12 +209,16 @@
       "note.chatConfirm": "The confirmation screen now clearly shows what the request was about and who it was sent to. It also gives a specific reply-by date and explains that the answer will appear in this portal.",
       "note.medsWhat": "Added \"Not in this list\" and \"Not sure\" options for cases where the user cannot find their medicine or is unsure which one to choose. A simple dosage instruction is now shown under each medicine. A phone number has also been added for users who need help with their medication or how to use it. Users can now also select more than one medicine to order at once.",
       "note.medsCheck": "Added a clear review notice to explain that this page is only a summary and that the request has not been sent yet. The notice also tells users which button to press to send the request.",
-      "note.medsConfirm": "Added a clear notice explaining that the request has not been submitted yet. A phone number is now shown for users who notice a mistake or need help. The message has been made clearer by explaining how the user will receive further updates."
+      "note.medsConfirm": "Added a clear notice explaining that the request has not been submitted yet. A phone number is now shown for users who notice a mistake or need help. The message has been made clearer by explaining how the user will receive further updates.",
+      "note.a11yBar": "\"Read aloud\" was renamed to \"Accessibility tools\" to better describe the feature. The previous \"Stop reading\" button was removed because it did not stop the reading properly. Users can now turn the accessibility tools on or off with one button. A new \"Stop step-by-step instructions\" button was added to immediately stop the guided instructions.",
+      "note.homeSubheaders": "Added short subheaders to the \"Make appointment\" and \"Ask GP/Pharmacy\" cards.",
+      "note.apptLanding": "Added a link in the \"Make appointment\" section for users who decide they want to ask the GP or pharmacy a question instead. This matches the existing link in the \"Ask GP/Pharmacy\" section and makes it easier to switch between the two tasks."
     },
     nl: {
       "bar.language": "Taal", "bar.textsize": "Tekstgrootte",
-      "bar.contrast": "Hoog contrast", "bar.readaloud": "Voorlezen",
-      "bar.tour": "Laat zien hoe", "bar.stopspeak": "Stop voorlezen",
+      "bar.contrast": "Hoog contrast", "bar.readaloud": "Toegankelijkheidstools",
+      "bar.readaloudAction": "Voorlezen",
+      "bar.tour": "Laat zien hoe", "bar.stoptour": "Stop stap voor stap uitleg",
       "bar.notes": "Wijzigingsnotities tonen",
       "loggedin": "U bent aangemeld als:",
       "banner.offeredby": "Aangeboden door:",
@@ -233,7 +241,7 @@
       "settings.modeDesc": "Kies hoe u het portaal wilt gebruiken.",
       "settings.currentMode": "Huidige modus",
       "help.home": "Dit is uw startpagina. Kies een van de grote knoppen om verder te gaan. U kunt een afspraak maken, medicijnen aanvragen of een vraag stellen aan uw huisarts.",
-      "help.appt-landing": "Hier kunt u een nieuwe afspraak maken of uw komende afspraken bekijken. Druk op 'Een afspraak maken' om te beginnen.",
+      "help.appt-landing": "Hier kunt u een nieuwe afspraak maken of uw komende afspraken bekijken. Druk op 'Een afspraak maken' om te beginnen. Wilt u liever een vraag stellen? Dan kunt u daar ook naar overschakelen.",
       "help.appt-intro": "Uw huisarts vraagt u eerst een paar vragen te beantwoorden. Druk op de knop om met de vragen te beginnen.",
       "help.appt-q": "Beantwoord de vraag door op één van de opties te drukken. Druk dan op 'Volgende' om door te gaan.",
       "help.appt-advice": "Dit is ons advies voor u. Lees het goed door. Druk daarna op de knop om verder te gaan.",
@@ -260,7 +268,9 @@
 
       "home.title": "Mijn gezondheid",
       "tile.appt": "Afspraak maken en bekijken", "tile.medicines": "Mijn medicijnen",
+      "tile.apptHint": "Maak een nieuwe afspraak of bekijk uw komende afspraken",
       "tile.chat": "Vraag aan huisarts / apotheek",
+      "tile.chatHint": "Stuur een vraag naar uw huisarts of apotheek",
       "tile.file": "Mijn dossier",
       "tile.paths": "Mijn zorgpaden", "tile.details": "Gegevens huisarts / apotheek",
       "tile.news": "Nieuws", "tile.settings": "Instellingen",
@@ -271,6 +281,7 @@
       "apptLanding.title": "Afspraak maken en bekijken",
       "apptLanding.make": "Een afspraak maken",
       "apptLanding.history": "Eerdere afspraken bekijken",
+      "apptLanding.chatOption": "Ik wil liever een vraag stellen<small>Wilt u in plaats daarvan een vraag stellen aan de huisarts of apotheek? Klik dan hier</small>",
       "apptLanding.upcoming": "Uw komende afspraken",
       "apptLanding.none": "Er zijn geen komende afspraken voor u gevonden.",
 
@@ -506,6 +517,7 @@
         { sel: "[data-view='appt-landing'] h1", t: "This is the appointments page. From here you can make a new appointment or view past ones." },
         { sel: "#appt-make-btn",    t: "To schedule a new appointment with your GP, select \"Make an appointment.\"" },
         { sel: "#appt-history-btn", t: "To see appointments you have had before, select \"View past appointments.\"" },
+        { sel: "#appt-chat-link", t: "Would you rather ask the GP or pharmacy a question instead of booking? Select this button." },
         { sel: "#appt-upcoming-card", t: "Your upcoming appointments are shown here. Currently no upcoming appointments have been found." },
         { sel: "#appt-back-home",   t: "When you are done, select \"Back to home\" to return to the main page." }
       ],
@@ -585,6 +597,7 @@
         { sel: "[data-view='appt-landing'] h1", t: "Dit is de afsprakenpagina. Hier kunt u een nieuwe afspraak maken of eerdere afspraken bekijken." },
         { sel: "#appt-make-btn",    t: "Om een nieuwe afspraak te maken bij uw huisarts, kiest u \"Afspraak maken.\"" },
         { sel: "#appt-history-btn", t: "Om eerdere afspraken te bekijken, kiest u \"Afspraken bekijken.\"" },
+        { sel: "#appt-chat-link", t: "Wilt u liever een vraag stellen aan de huisarts of apotheek in plaats van een afspraak maken? Kies dan deze knop." },
         { sel: "#appt-upcoming-card", t: "Uw komende afspraken worden hier getoond. Er zijn momenteel geen komende afspraken gevonden." },
         { sel: "#appt-back-home",   t: "Als u klaar bent, kiest u \"Terug naar home\" om terug te gaan naar de startpagina." }
       ],
@@ -723,7 +736,6 @@
   function applyReadaloud() {
     document.body.classList.toggle("readaloud-on", state.readaloud);
     $("#btn-readaloud").setAttribute("aria-pressed", String(state.readaloud));
-    $("#btn-stopspeak").classList.toggle("sr-only", !state.readaloud);
     refreshSpeakButtons();
   }
   function applyNotes() {
@@ -770,7 +782,7 @@
       var btn = document.createElement("button");
       btn.type = "button";
       btn.className = "speak-btn";
-      btn.setAttribute("aria-label", t("bar.readaloud"));
+      btn.setAttribute("aria-label", t("bar.readaloudAction"));
       btn.innerHTML = '<svg aria-hidden="true"><use href="#i-speaker"/></svg>';
       btn.addEventListener("click", function (ev) {
         ev.stopPropagation();
@@ -1234,17 +1246,22 @@
 
   /* ---------------- Step-by-step walkthrough (idle popup, no overlay) ---------------- */
   var wt = { steps: [], i: 0, active: false };
+  function setTourStopVisible(visible) {
+    var btn = $("#btn-stoptour");
+    if (btn) btn.classList.toggle("sr-only", !visible);
+  }
   function startWalkthrough() {
     var viewName = ($(".view.is-active") || {}).getAttribute ? $(".view.is-active").getAttribute("data-view") : "home";
     var tourKey = (state.viewMode === "guided" && viewName === "home") ? "guided-home" : viewName;
     wt.steps = (TOURS[state.lang] && TOURS[state.lang][tourKey]) || (TOURS[state.lang] && TOURS[state.lang]["guided-home"]) || [];
     if (!wt.steps.length) return;
     wt.i = 0; wt.active = true;
+    setTourStopVisible(true);
     wtStep();
   }
   function wtStep() {
     clearWtHighlight();
-    if (!wt.active || wt.i >= wt.steps.length) { wt.active = false; return; }
+    if (!wt.active || wt.i >= wt.steps.length) { wt.active = false; setTourStopVisible(false); return; }
     var step = wt.steps[wt.i];
     var target = $(step.sel);
     if (target) {
@@ -1271,6 +1288,7 @@
   function stopWalkthrough() {
     wt.active = false;
     clearWtHighlight();
+    setTourStopVisible(false);
     if ("speechSynthesis" in window) window.speechSynthesis.cancel();
   }
 
@@ -1292,7 +1310,7 @@
       var nav = e.target.closest("[data-go]");
       if (nav) {
         if (nav.id === "meds-order-btn") resetMedicineOrder();
-        if (nav.id === "tile-chat" || nav.id === "gtile-chat") resetChatFlow();
+        if (nav.id === "tile-chat" || nav.id === "gtile-chat" || nav.id === "appt-chat-link") resetChatFlow();
         showView(nav.getAttribute("data-go"));
         return;
       }
@@ -1345,7 +1363,7 @@
       if (!state.readaloud) stopSpeaking();
       applyReadaloud();
     });
-    $("#btn-stopspeak").addEventListener("click", stopSpeaking);
+    $("#btn-stoptour").addEventListener("click", stopWalkthrough);
 
     // change notes (sticky notes) toggle
     $("#btn-notes").addEventListener("click", function () {
