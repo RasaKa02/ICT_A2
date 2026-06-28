@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MijnGezondheid.net — toegankelijk / accessible</title>
-  <link rel="stylesheet" href="css/styles.css?v=20260628-flows2" />
+  <link rel="stylesheet" href="css/styles.css?v=20260628-flows3" />
 </head>
 <body>
 
@@ -118,6 +118,7 @@
           <span class="tile-badge">2</span>
           <svg class="tile-ico" aria-hidden="true"><use href="#i-chat"/></svg>
           <span data-i18n="tile.chat">Ask the GP / pharmacy</span>
+          <small class="tile-hint" data-i18n="tile.chatHint">For questions to the GP, assistant, or pharmacy</small>
         </button>
         <button class="tile" disabled id="tile-files">
           <svg class="tile-ico" aria-hidden="true"><use href="#i-file"/></svg>
@@ -157,7 +158,10 @@
           <button class="guided-tile" data-go="chat-type" id="gtile-chat">
             <span class="guided-badge">2</span>
             <svg class="guided-ico" aria-hidden="true"><use href="#i-chat"/></svg>
-            <span data-i18n="tile.chat">Vraag aan huisarts / apotheek</span>
+            <span class="guided-tile-text">
+              <span data-i18n="tile.chat">Vraag aan huisarts / apotheek</span>
+              <small data-i18n="tile.chatHint">Voor vragen aan de huisarts, assistent of apotheek</small>
+            </span>
           </button>
           <button class="guided-tile" disabled id="gtile-files">
             <svg class="guided-ico" aria-hidden="true"><use href="#i-file"/></svg>
@@ -697,6 +701,6 @@
     </div>
   </div>
 
-  <script src="js/app.js?v=20260628-flows7"></script>
+  <script src="js/app.js?v=20260628-flows8"></script>
 </body>
 </html>

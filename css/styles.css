@@ -270,6 +270,7 @@ h2 { font-size: 1.4rem; margin: 1.4rem 0 0.6rem; }
 }
 .tile[disabled] { cursor: not-allowed; }
 .tile[disabled]:hover { background: var(--teal); }
+.tile .tile-hint { display: block; font-size: 0.78em; font-weight: 400; opacity: 0.85; margin-top: 0.1rem; }
 
 @media (max-width: 720px) {
   .tiles { grid-template-columns: repeat(2, 1fr); }
@@ -784,6 +785,8 @@ html[data-view-mode="guided"] .guided-home { display: block; }
 .guided-tile[disabled] { cursor: not-allowed; opacity: 0.75; }
 .guided-tile[disabled]:hover { background: var(--teal); }
 .guided-ico { width: 3.4rem; height: 3.4rem; flex: none; }
+.guided-tile-text { display: flex; flex-direction: column; gap: 0.3rem; }
+.guided-tile-text small { font-size: 0.7em; font-weight: 400; opacity: 0.85; }
 .guided-badge {
   position: absolute; top: 0.75rem; right: 1rem;
   background: var(--ok); color: #fff; border-radius: 50%;

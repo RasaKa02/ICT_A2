@@ -62,7 +62,9 @@
 
       "home.title": "My health",
       "tile.appt": "Make and view appointments", "tile.medicines": "My medicines",
-      "tile.chat": "Ask the GP / pharmacy", "tile.file": "My file",
+      "tile.chat": "Ask the GP / pharmacy",
+      "tile.chatHint": "For questions to the GP, assistant, or pharmacy",
+      "tile.file": "My file",
       "tile.paths": "My care paths", "tile.details": "GP / pharmacy details",
       "tile.news": "News", "tile.settings": "Settings",
 
@@ -187,7 +189,7 @@
 
       "chatConfirm.title": "Your question has been sent",
       "chatConfirm.msg": "Thank you. Your question has been sent to the practice.",
-      "chatConfirm.replyBy": "You will receive a reply by:",
+      "chatConfirm.replyBy": "You will receive a reply in this portal by:",
 
       "welcome.title": "Welcome to your health portal",
       "welcome.standard.intro": "This website is made easier to use. At the top of the website you can use <b>Read aloud</b> to hear text on the page.",
@@ -249,7 +251,9 @@
 
       "home.title": "Mijn gezondheid",
       "tile.appt": "Afspraak maken en bekijken", "tile.medicines": "Mijn medicijnen",
-      "tile.chat": "Vraag aan huisarts / apotheek", "tile.file": "Mijn dossier",
+      "tile.chat": "Vraag aan huisarts / apotheek",
+      "tile.chatHint": "Voor vragen aan de huisarts, assistent of apotheek",
+      "tile.file": "Mijn dossier",
       "tile.paths": "Mijn zorgpaden", "tile.details": "Gegevens huisarts / apotheek",
       "tile.news": "Nieuws", "tile.settings": "Instellingen",
 
@@ -341,7 +345,7 @@
 
       "chatCategory.title": "Waar gaat uw vraag over?",
       "chatCategory.lead": "Kies de optie die het beste past.",
-      "chatCategory.opt1": "Stel een nieuwe vraag",
+      "chatCategory.opt1": "Nieuwe vraag stellen",
       "chatCategory.opt1Hint": "Iets dat u nog niet besproken heeft",
       "chatCategory.opt2": "Over iets van eerder",
       "chatCategory.opt2Hint": "Een klacht die u eerder besprak",
@@ -374,7 +378,7 @@
 
       "chatConfirm.title": "Uw vraag is verstuurd",
       "chatConfirm.msg": "Dank u wel. Uw vraag is naar de praktijk verstuurd.",
-      "chatConfirm.replyBy": "U ontvangt antwoord vóór:",
+      "chatConfirm.replyBy": "U ontvangt antwoord in dit portaal vóór:",
 
       "welcome.title": "Welkom bij uw gezondheidsportaal",
       "welcome.standard.intro": "Deze website is makkelijker gemaakt in gebruik. Bovenaan de website kunt u <b>Voorlezen</b> gebruiken om tekst op de pagina te horen.",
