@@ -174,7 +174,7 @@
       "chatForm.error": "Please write your question before sending.",
 
       "chatReview.title": "Check your question",
-      "chatReview.notice": "This is an overview only — your question has not been sent yet.",
+      "chatReview.notice": "This is an overview only — your question has not been sent yet. Press \"Confirm and send\" to send it.",
       "chatReview.to": "To:", "chatReview.about": "About:",
       "chatReview.subject": "Subject:", "chatReview.message": "Your question:",
       "chatReview.attachment": "Attachment:",
@@ -199,10 +199,10 @@
 
       "note.apptAdvice": "A phone number is now always shown, regardless of the advice given. A notice has also been added to make clear that no appointment has been booked yet. The notice refers to the exact button the user needs to click. If a GP appointment is not recommended, the user can still book one by clicking the \"Schedule an appointment\" button. This replaces the less clear option \"I would still like an appointment\".",
       "note.chatType": "The option to ask a question is now split into two clear choices: \"Ask the GP\" and \"Ask the pharmacy.\" A shortcut has been added for users who want to book an appointment instead. The page now also shows a warning for urgent situations, including the practice phone number.",
-      "note.chatCategory": "NEW SCREEN: choose what your question is about from several options. \"A new question or complaint\" was renamed to \"Ask a new question\".",
-      "note.chatForm": "CHANGED: the subject field now fills in automatically based on the topic you chose, with matching suggestion chips. The button now leads to a review screen instead of sending right away.",
-      "note.chatReview": "NEW SCREEN: review everything before sending — nothing has been sent yet at this point.",
-      "note.chatConfirm": "CHANGED: the confirmation now shows who/what it was about and a concrete reply-by date, and makes clear the answer appears in this portal.",
+      "note.chatCategory": "Added a screen where users can choose what their question is about from several clear options. The button \"A new question or complaint\" was renamed to \"Ask a new question\" to make the wording simpler and easier to understand.",
+      "note.chatForm": "The subject field now fills in automatically based on the topic the user selected. Matching suggestion chips are also shown to help the user write their message. A review screen has been added before submission, and the button was changed from \"Submit my question\" to \"Review my question\" to match this new step.",
+      "note.chatReview": "Added a review screen where users can check their question before sending it. A clear message has been added to show that the question has not been sent yet and will only be submitted after the user confirms it.",
+      "note.chatConfirm": "The confirmation screen now clearly shows what the request was about and who it was sent to. It also gives a specific reply-by date and explains that the answer will appear in this portal.",
       "note.medsWhat": "Added \"Not in this list\" and \"Not sure\" options for cases where the user cannot find their medicine or is unsure which one to choose. A simple dosage instruction is now shown under each medicine. A phone number has also been added for users who need help with their medication or how to use it. Users can now also select more than one medicine to order at once.",
       "note.medsCheck": "Added a clear review notice to explain that this page is only a summary and that the request has not been sent yet. The notice also tells users which button to press to send the request.",
       "note.medsConfirm": "Added a clear notice explaining that the request has not been submitted yet. A phone number is now shown for users who notice a mistake or need help. The message has been made clearer by explaining how the user will receive further updates."
@@ -371,7 +371,7 @@
       "chatForm.error": "Schrijf eerst uw vraag voordat u verstuurt.",
 
       "chatReview.title": "Controleer uw vraag",
-      "chatReview.notice": "Dit is alleen een overzicht — uw vraag is nog niet verstuurd.",
+      "chatReview.notice": "Dit is alleen een overzicht — uw vraag is nog niet verstuurd. Druk op \"Bevestigen en versturen\" om te versturen.",
       "chatReview.to": "Aan:", "chatReview.about": "Over:",
       "chatReview.subject": "Onderwerp:", "chatReview.message": "Uw vraag:",
       "chatReview.attachment": "Bijlage:",
