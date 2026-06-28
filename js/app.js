@@ -43,7 +43,7 @@
       "help.appt-slots": "Choose a day first, then a time. Then press the big button to confirm your appointment.",
       "help.appt-confirm": "Well done! Your appointment has been made. You can go back to the homepage.",
       "help.meds-home": "Here you can order repeat medication. Press 'Order medicines' to start.",
-      "help.meds-what": "Choose which prescription medicine you want to order. If your medicine is not listed, or you are not sure, choose one of those options instead. Then press Next.",
+      "help.meds-what": "Choose which prescription medicines you want to order — you can choose more than one. If your medicine is not listed, or you are not sure, choose one of those options instead. Then press Next.",
       "help.meds-how": "Choose where you want to pick up the medicine. Then press Next.",
       "help.meds-check": "Check your choices. This is only an overview — nothing has been sent yet. If everything is correct, submit the order.",
       "help.meds-confirm": "Your order has been sent. You can see a summary below, and the phone number to call if something is wrong.",
@@ -64,7 +64,6 @@
       "home.title": "My health",
       "tile.appt": "Make and view appointments", "tile.medicines": "My medicines",
       "tile.chat": "Ask the GP / pharmacy",
-      "tile.chatHint": "For questions to the GP, assistant, or pharmacy",
       "tile.file": "My file",
       "tile.paths": "My care paths", "tile.details": "GP / pharmacy details",
       "tile.news": "News", "tile.settings": "Settings",
@@ -115,7 +114,8 @@
       "meds.status.what": "Step 1 of 3: choose the medicine",
       "meds.status.how": "Step 2 of 3: choose where to pick it up",
       "meds.status.check": "Step 3 of 3: check and submit",
-      "meds.whatTitle": "What medicine do you want to order?",
+      "meds.whatTitle": "Which medicines do you want to order?",
+      "meds.multiSelectHint": "You can choose more than one medicine.",
       "meds.howTitle": "How do you want to pick up your medicine?",
       "meds.checkTitle": "Check your order",
       "meds.prescriptionOnly": "Only available with a prescription",
@@ -129,13 +129,13 @@
       "meds.pickup2d": "Laat 88, Alkmaar",
       "meds.pickup3": "Pick up at the GP office",
       "meds.pickup3d": "Huisartsenpraktijk Koedijk, De Hertog 2",
-      "meds.summaryMedicine": "Medicine:",
+      "meds.summaryMedicine": "Medicines:",
       "meds.summaryPickup": "Pickup location:",
-      "meds.submit": "Submit order",
+      "meds.submit": "Send request",
       "meds.confirmTitle": "Your order has been sent",
       "meds.confirmMsg": "Your medicine request has been sent to the GP practice. You will receive a message by email or text when you can pick it up.",
       "meds.more": "Back to my medicines",
-      "meds.notSubmittedNotice": "Check your request. Nothing has been sent yet.",
+      "meds.notSubmittedNotice": "This is a summary of your request. It has not been sent yet. Press \"Send request\" to send it.",
       "meds.medOther": "My medicine is not in this list",
       "meds.medOtherHint": "Tell us which medicine you mean",
       "meds.medOtherInputLabel": "Which medicine do you need?",
@@ -197,16 +197,15 @@
       "welcome.close": "Start using the portal",
       "tour.close": "Close",
 
-      "note.home": "NEW: added a short subtitle clarifying this tile covers GP, assistant, and pharmacy questions.",
-      "note.apptAdvice": "CHANGED: a phone number is now always shown here, whatever the advice. A notice was added stating no appointment has been booked yet, naming the actual button below. When a GP appointment is not recommended, it is possible to schedule one anyway with the \"Schedule an appointment\" button instead of \"I would still like an appointment\".",
-      "note.chatType": "CHANGED: questions to the GP and to the pharmacy are now two separate buttons (previously combined). Added a shortcut to make an appointment instead, and an urgent-situation warning with the practice phone number.",
+      "note.apptAdvice": "A phone number is now always shown, regardless of the advice given. A notice has also been added to make clear that no appointment has been booked yet. The notice refers to the exact button the user needs to click. If a GP appointment is not recommended, the user can still book one by clicking the \"Schedule an appointment\" button. This replaces the less clear option \"I would still like an appointment\".",
+      "note.chatType": "The option to ask a question is now split into two clear choices: \"Ask the GP\" and \"Ask the pharmacy.\" A shortcut has been added for users who want to book an appointment instead. The page now also shows a warning for urgent situations, including the practice phone number.",
       "note.chatCategory": "NEW SCREEN: choose what your question is about from several options. \"A new question or complaint\" was renamed to \"Ask a new question\".",
       "note.chatForm": "CHANGED: the subject field now fills in automatically based on the topic you chose, with matching suggestion chips. The button now leads to a review screen instead of sending right away.",
       "note.chatReview": "NEW SCREEN: review everything before sending — nothing has been sent yet at this point.",
       "note.chatConfirm": "CHANGED: the confirmation now shows who/what it was about and a concrete reply-by date, and makes clear the answer appears in this portal.",
-      "note.medsWhat": "CHANGED: added \"not in this list\" and \"not sure\" options, a simple dosage instruction under each medicine, and a phone number for when you're unsure about your medication or how to use it.",
-      "note.medsCheck": "CHANGED: added a notice making clear this is only an overview and nothing has been sent yet.",
-      "note.medsConfirm": "CHANGED: now shows an order summary and a phone number to call about mistakes; the message mentions you'll be notified by email or text."
+      "note.medsWhat": "Added \"Not in this list\" and \"Not sure\" options for cases where the user cannot find their medicine or is unsure which one to choose. A simple dosage instruction is now shown under each medicine. A phone number has also been added for users who need help with their medication or how to use it. Users can now also select more than one medicine to order at once.",
+      "note.medsCheck": "Added a clear review notice to explain that this page is only a summary and that the request has not been sent yet. The notice also tells users which button to press to send the request.",
+      "note.medsConfirm": "Added a clear notice explaining that the request has not been submitted yet. A phone number is now shown for users who notice a mistake or need help. The message has been made clearer by explaining how the user will receive further updates."
     },
     nl: {
       "bar.language": "Taal", "bar.textsize": "Tekstgrootte",
@@ -241,7 +240,7 @@
       "help.appt-slots": "Kies eerst een dag, en daarna een tijd. Druk dan op de grote knop om de afspraak te bevestigen.",
       "help.appt-confirm": "Gefeliciteerd! Uw afspraak is gemaakt. U kunt terugkeren naar de startpagina.",
       "help.meds-home": "Hier kunt u herhaalmedicatie bestellen. Druk op 'Medicijnen bestellen' om te beginnen.",
-      "help.meds-what": "Kies welk medicijn op recept u wilt bestellen. Staat uw medicijn er niet bij, of weet u het niet zeker? Kies dan een van die opties. Druk daarna op Volgende.",
+      "help.meds-what": "Kies welke medicijnen op recept u wilt bestellen — u kunt meer dan één kiezen. Staat uw medicijn er niet bij, of weet u het niet zeker? Kies dan een van die opties. Druk daarna op Volgende.",
       "help.meds-how": "Kies waar u het medicijn wilt ophalen. Druk daarna op Volgende.",
       "help.meds-check": "Controleer uw keuzes. Dit is alleen een overzicht — er is nog niets verstuurd. Klopt alles? Verstuur dan de bestelling.",
       "help.meds-confirm": "Uw bestelling is verstuurd. Hieronder ziet u een overzicht en het telefoonnummer dat u kunt bellen als er iets niet klopt.",
@@ -262,7 +261,6 @@
       "home.title": "Mijn gezondheid",
       "tile.appt": "Afspraak maken en bekijken", "tile.medicines": "Mijn medicijnen",
       "tile.chat": "Vraag aan huisarts / apotheek",
-      "tile.chatHint": "Voor vragen aan de huisarts, assistent of apotheek",
       "tile.file": "Mijn dossier",
       "tile.paths": "Mijn zorgpaden", "tile.details": "Gegevens huisarts / apotheek",
       "tile.news": "Nieuws", "tile.settings": "Instellingen",
@@ -313,7 +311,8 @@
       "meds.status.what": "Stap 1 van 3: kies het medicijn",
       "meds.status.how": "Stap 2 van 3: kies waar u het ophaalt",
       "meds.status.check": "Stap 3 van 3: controleer en verstuur",
-      "meds.whatTitle": "Welk medicijn wilt u bestellen?",
+      "meds.whatTitle": "Welke medicijnen wilt u bestellen?",
+      "meds.multiSelectHint": "U kunt meer dan één medicijn kiezen.",
       "meds.howTitle": "Hoe wilt u uw medicijn ophalen?",
       "meds.checkTitle": "Controleer uw bestelling",
       "meds.prescriptionOnly": "Alleen verkrijgbaar op recept",
@@ -327,13 +326,13 @@
       "meds.pickup2d": "Laat 88, Alkmaar",
       "meds.pickup3": "Ophalen bij de huisartsenpraktijk",
       "meds.pickup3d": "Huisartsenpraktijk Koedijk, De Hertog 2",
-      "meds.summaryMedicine": "Medicijn:",
+      "meds.summaryMedicine": "Medicijnen:",
       "meds.summaryPickup": "Ophaallocatie:",
-      "meds.submit": "Bestelling versturen",
+      "meds.submit": "Verzoek versturen",
       "meds.confirmTitle": "Uw bestelling is verstuurd",
       "meds.confirmMsg": "Uw medicijnaanvraag is verstuurd naar de huisartsenpraktijk. U krijgt bericht via e-mail of sms wanneer u het kunt ophalen.",
       "meds.more": "Terug naar mijn medicijnen",
-      "meds.notSubmittedNotice": "Controleer uw aanvraag. Er is nog niets verstuurd.",
+      "meds.notSubmittedNotice": "Dit is een samenvatting van uw aanvraag. Deze is nog niet verstuurd. Druk op \"Verzoek versturen\" om te versturen.",
       "meds.medOther": "Mijn medicijn staat niet in deze lijst",
       "meds.medOtherHint": "Laat ons weten welk medicijn u bedoelt",
       "meds.medOtherInputLabel": "Welk medicijn heeft u nodig?",
@@ -527,7 +526,7 @@
         { sel: "[data-view='meds-home'] .link-back", t: "Use this button to return to the homepage." }
       ],
       "meds-what": [
-        { sel: "#meds-medicine-options", t: "Choose the medicine you want to order." },
+        { sel: "#meds-medicine-options", t: "Choose the medicines you want to order. You can choose more than one." },
         { sel: "#meds-what-next", t: "After choosing a medicine, press Next." }
       ],
       "meds-how": [
@@ -606,7 +605,7 @@
         { sel: "[data-view='meds-home'] .link-back", t: "Met deze knop gaat u terug naar de startpagina." }
       ],
       "meds-what": [
-        { sel: "#meds-medicine-options", t: "Kies welk medicijn u wilt bestellen." },
+        { sel: "#meds-medicine-options", t: "Kies welke medicijnen u wilt bestellen. U kunt meer dan één kiezen." },
         { sel: "#meds-what-next", t: "Heeft u een medicijn gekozen? Druk op Volgende." }
       ],
       "meds-how": [
@@ -656,7 +655,7 @@
   };
   var qIndex = 0, qAnswers = [];
   var chosenDay = null, chosenTime = null;
-  var chosenMedicine = null, chosenPickup = null, chosenMedicineOther = "";
+  var chosenMedicines = [], chosenPickup = null, chosenMedicineOther = "";
   var chosenChatRecipient = null, chosenChatCategory = null, chatSubjectAutoFilled = false;
 
   var $ = function (s, root) { return (root || document).querySelector(s); };
@@ -983,18 +982,22 @@
     return "";
   }
   function updateMedsWhatNext() {
-    var ok = !!chosenMedicine;
-    if (chosenMedicine === "other") ok = !!(chosenMedicineOther && chosenMedicineOther.trim());
+    var ok = chosenMedicines.length > 0;
+    if (ok && chosenMedicines.indexOf("other") !== -1) ok = !!(chosenMedicineOther && chosenMedicineOther.trim());
     $("#meds-what-next").disabled = !ok;
   }
   function selectMedicine(id) {
-    chosenMedicine = id;
+    var i = chosenMedicines.indexOf(id);
+    if (i === -1) chosenMedicines.push(id); else chosenMedicines.splice(i, 1);
     $$(".med-choice").forEach(function (b) {
-      b.classList.toggle("selected", b.getAttribute("data-med") === id);
+      var isSelected = chosenMedicines.indexOf(b.getAttribute("data-med")) !== -1;
+      b.classList.toggle("selected", isSelected);
+      b.setAttribute("aria-pressed", String(isSelected));
     });
     var otherField = $("#meds-other-field");
-    if (otherField) otherField.style.display = id === "other" ? "block" : "none";
-    if (id !== "other") chosenMedicineOther = "";
+    var otherSelected = chosenMedicines.indexOf("other") !== -1;
+    if (otherField) otherField.style.display = otherSelected ? "block" : "none";
+    if (!otherSelected) chosenMedicineOther = "";
     updateMedsWhatNext();
   }
   function selectPickup(id) {
@@ -1011,13 +1014,14 @@
     if (chosenPickup) showView("meds-check");
   }
   function submitMedicine() {
-    if (chosenMedicine && chosenPickup) showView("meds-confirm");
+    if (chosenMedicines.length && chosenPickup) showView("meds-confirm");
   }
   function resetMedicineOrder() {
-    chosenMedicine = null;
+    chosenMedicines = [];
     chosenPickup = null;
     chosenMedicineOther = "";
     $$(".med-choice, .pickup-choice").forEach(function (b) { b.classList.remove("selected"); });
+    $$(".med-choice").forEach(function (b) { b.setAttribute("aria-pressed", "false"); });
     $("#meds-what-next").disabled = true;
     $("#meds-how-next").disabled = true;
     var otherField = $("#meds-other-field");
@@ -1025,16 +1029,20 @@
     var otherInput = $("#meds-other-input");
     if (otherInput) otherInput.value = "";
   }
+  function medicinesSummaryHtml() {
+    return '<p class="speakable"><strong>' + escapeHtml(t("meds.summaryMedicine")) + "</strong></p>" +
+      "<ul>" + chosenMedicines.map(function (id) {
+        return '<li class="speakable">' + escapeHtml(medicineLabel(id)) + "</li>";
+      }).join("") + "</ul>";
+  }
   function renderMedicineCheck() {
     var box = $("#meds-check-summary");
     if (!box) return;
-    if (!chosenMedicine || !chosenPickup) {
-      showView(!chosenMedicine ? "meds-what" : "meds-how");
+    if (!chosenMedicines.length || !chosenPickup) {
+      showView(!chosenMedicines.length ? "meds-what" : "meds-how");
       return;
     }
-    box.innerHTML =
-      '<p class="speakable"><strong>' + escapeHtml(t("meds.summaryMedicine")) + "</strong> " +
-      escapeHtml(medicineLabel(chosenMedicine)) + "</p>" +
+    box.innerHTML = medicinesSummaryHtml() +
       '<p class="speakable"><strong>' + escapeHtml(t("meds.summaryPickup")) + "</strong> " +
       escapeHtml(pickupLabel(chosenPickup)) + "</p>";
     refreshSpeakButtons();
@@ -1042,10 +1050,8 @@
   function renderMedicineConfirm() {
     var box = $("#meds-confirm-summary");
     if (!box) return;
-    if (!chosenMedicine || !chosenPickup) { box.innerHTML = ""; return; }
-    box.innerHTML =
-      '<p class="speakable"><strong>' + escapeHtml(t("meds.summaryMedicine")) + "</strong> " +
-      escapeHtml(medicineLabel(chosenMedicine)) + "</p>" +
+    if (!chosenMedicines.length || !chosenPickup) { box.innerHTML = ""; return; }
+    box.innerHTML = medicinesSummaryHtml() +
       '<p class="speakable"><strong>' + escapeHtml(t("meds.summaryPickup")) + "</strong> " +
       escapeHtml(pickupLabel(chosenPickup)) + "</p>";
     refreshSpeakButtons();
@@ -1360,12 +1366,6 @@
     });
 
     // medicines order flow
-    $$(".med-choice").forEach(function (btn) {
-      btn.addEventListener("click", function (e) {
-        e.stopPropagation();
-        selectMedicine(btn.getAttribute("data-med"));
-      });
-    });
     $$(".pickup-choice").forEach(function (btn) {
       btn.addEventListener("click", function (e) {
         e.stopPropagation();

@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MijnGezondheid.net — toegankelijk / accessible</title>
-  <link rel="stylesheet" href="css/styles.css?v=20260628-notes3" />
+  <link rel="stylesheet" href="css/styles.css?v=20260628-multi1" />
 </head>
 <body>
 
@@ -110,10 +110,6 @@
 
     <!-- ---------- HOME ---------- -->
     <section class="view is-active" data-view="home" aria-label="Home">
-      <div class="sticky-note">
-        <span class="note-pin" aria-hidden="true">📌</span>
-        <span data-i18n="note.home">NEW: added a short subtitle clarifying this tile covers GP, assistant, and pharmacy questions.</span>
-      </div>
       <div class="tiles">
         <button class="tile" data-go="appt-landing" id="tile-appt">
           <svg class="tile-ico" aria-hidden="true"><use href="#i-calendar"/></svg>
@@ -127,7 +123,6 @@
           <span class="tile-badge">2</span>
           <svg class="tile-ico" aria-hidden="true"><use href="#i-chat"/></svg>
           <span data-i18n="tile.chat">Ask the GP / pharmacy</span>
-          <small class="tile-hint" data-i18n="tile.chatHint">For questions to the GP, assistant, or pharmacy</small>
         </button>
         <button class="tile" disabled id="tile-files">
           <svg class="tile-ico" aria-hidden="true"><use href="#i-file"/></svg>
@@ -167,10 +162,7 @@
           <button class="guided-tile" data-go="chat-type" id="gtile-chat">
             <span class="guided-badge">2</span>
             <svg class="guided-ico" aria-hidden="true"><use href="#i-chat"/></svg>
-            <span class="guided-tile-text">
-              <span data-i18n="tile.chat">Vraag aan huisarts / apotheek</span>
-              <small data-i18n="tile.chatHint">Voor vragen aan de huisarts, assistent of apotheek</small>
-            </span>
+            <span data-i18n="tile.chat">Vraag aan huisarts / apotheek</span>
           </button>
           <button class="guided-tile" disabled id="gtile-files">
             <svg class="guided-ico" aria-hidden="true"><use href="#i-file"/></svg>
@@ -287,7 +279,7 @@
       <hr class="section-rule" />
       <div class="sticky-note">
         <span class="note-pin" aria-hidden="true">📌</span>
-        <span data-i18n="note.apptAdvice">CHANGED: a phone number is now always shown here, whatever the advice. A notice was added stating no appointment has been booked yet, naming the actual button below. When a GP appointment is not recommended, it is possible to schedule one anyway with the "Schedule an appointment" button instead of "I would still like an appointment".</span>
+        <span data-i18n="note.apptAdvice">A phone number is now always shown, regardless of the advice given. A notice has also been added to make clear that no appointment has been booked yet. The notice refers to the exact button the user needs to click. If a GP appointment is not recommended, the user can still book one by clicking the "Schedule an appointment" button. This replaces the less clear option "I would still like an appointment".</span>
       </div>
       <div id="appt-advice-content"><!-- JS renders the result here --></div>
       <button class="link-back" data-go="home" data-i18n="back.home">Back to home</button>
@@ -354,25 +346,26 @@
       <hr class="section-rule" />
       <div class="sticky-note">
         <span class="note-pin" aria-hidden="true">📌</span>
-        <span data-i18n="note.medsWhat">CHANGED: added "not in this list" and "not sure" options, a simple dosage instruction under each medicine, and a phone number for when you're unsure about your medication or how to use it.</span>
+        <span data-i18n="note.medsWhat">Added "Not in this list" and "Not sure" options for cases where the user cannot find their medicine or is unsure which one to choose. A simple dosage instruction is now shown under each medicine. A phone number has also been added for users who need help with their medication or how to use it. Users can now also select more than one medicine to order at once.</span>
       </div>
       <p class="med-step-status speakable" data-i18n="meds.status.what">Stap 1 van 3: kies het medicijn</p>
-      <h2 class="speakable" data-i18n="meds.whatTitle">Welk medicijn wilt u bestellen?</h2>
+      <h2 class="speakable" data-i18n="meds.whatTitle">Welke medicijnen wilt u bestellen?</h2>
+      <p class="muted speakable" data-i18n="meds.multiSelectHint">U kunt meer dan één medicijn kiezen.</p>
       <div class="options" role="group" id="meds-medicine-options">
-        <button type="button" class="option med-choice" data-med="salbutamol" onclick="window.MGSelectMedicine && window.MGSelectMedicine('salbutamol')">
-          <span class="opt-mark" aria-hidden="true"></span>
+        <button type="button" class="option med-choice" data-med="salbutamol" aria-pressed="false" onclick="window.MGSelectMedicine && window.MGSelectMedicine('salbutamol')">
+          <span class="opt-mark checkbox" aria-hidden="true"></span>
           <span class="option-text"><strong data-i18n="meds.med1">Salbutamol inhalator 100 microgram</strong><small data-i18n="meds.med1Dose">Gebruik indien nodig, maximaal 8 pufjes per dag</small><small data-i18n="meds.prescriptionOnly">Alleen verkrijgbaar op recept</small></span>
         </button>
-        <button type="button" class="option med-choice" data-med="lisinopril" onclick="window.MGSelectMedicine && window.MGSelectMedicine('lisinopril')">
-          <span class="opt-mark" aria-hidden="true"></span>
+        <button type="button" class="option med-choice" data-med="lisinopril" aria-pressed="false" onclick="window.MGSelectMedicine && window.MGSelectMedicine('lisinopril')">
+          <span class="opt-mark checkbox" aria-hidden="true"></span>
           <span class="option-text"><strong data-i18n="meds.med2">Lisinopril 10 mg tabletten</strong><small data-i18n="meds.med2Dose">1 tablet per dag</small><small data-i18n="meds.prescriptionOnly">Alleen verkrijgbaar op recept</small></span>
         </button>
-        <button type="button" class="option med-choice" data-med="other" onclick="window.MGSelectMedicine && window.MGSelectMedicine('other')">
-          <span class="opt-mark" aria-hidden="true"></span>
+        <button type="button" class="option med-choice" data-med="other" aria-pressed="false" onclick="window.MGSelectMedicine && window.MGSelectMedicine('other')">
+          <span class="opt-mark checkbox" aria-hidden="true"></span>
           <span class="option-text"><strong data-i18n="meds.medOther">Mijn medicijn staat niet in deze lijst</strong><small data-i18n="meds.medOtherHint">Laat ons weten welk medicijn u bedoelt</small></span>
         </button>
-        <button type="button" class="option med-choice" data-med="unsure" onclick="window.MGSelectMedicine && window.MGSelectMedicine('unsure')">
-          <span class="opt-mark" aria-hidden="true"></span>
+        <button type="button" class="option med-choice" data-med="unsure" aria-pressed="false" onclick="window.MGSelectMedicine && window.MGSelectMedicine('unsure')">
+          <span class="opt-mark checkbox" aria-hidden="true"></span>
           <span class="option-text"><strong data-i18n="meds.medUnsure">Ik weet niet zeker welk medicijn ik nodig heb</strong><small data-i18n="meds.medUnsureHint">De praktijk neemt contact met u op om dit te bespreken</small></span>
         </button>
       </div>
@@ -423,17 +416,17 @@
       <hr class="section-rule" />
       <div class="sticky-note">
         <span class="note-pin" aria-hidden="true">📌</span>
-        <span data-i18n="note.medsCheck">CHANGED: added a notice making clear this is only an overview and nothing has been sent yet.</span>
+        <span data-i18n="note.medsCheck">Added a clear review notice to explain that this page is only a summary and that the request has not been sent yet. The notice also tells users which button to press to send the request.</span>
       </div>
       <p class="med-step-status speakable" data-i18n="meds.status.check">Stap 3 van 3: controleer en verstuur</p>
       <div class="notice info">
         <svg class="n-ico" aria-hidden="true"><use href="#i-info"/></svg>
-        <span class="speakable" data-i18n="meds.notSubmittedNotice">Dit is alleen een overzicht — uw bestelling is nog niet verstuurd.</span>
+        <span class="speakable" data-i18n="meds.notSubmittedNotice">Dit is een samenvatting van uw aanvraag. Deze is nog niet verstuurd. Druk op "Verzoek versturen" om te versturen.</span>
       </div>
       <div class="card" id="meds-check-summary"></div>
       <div class="btn-row">
         <button class="btn secondary grow" data-go="meds-how" data-i18n="nav.previous">Vorige</button>
-        <button class="btn grow" id="meds-submit" data-i18n="meds.submit" onclick="window.MGSubmitMedicine && window.MGSubmitMedicine()">Bestelling versturen</button>
+        <button class="btn grow" id="meds-submit" data-i18n="meds.submit" onclick="window.MGSubmitMedicine && window.MGSubmitMedicine()">Verzoek versturen</button>
       </div>
     </section>
 
@@ -443,7 +436,7 @@
       <hr class="section-rule" />
       <div class="sticky-note">
         <span class="note-pin" aria-hidden="true">📌</span>
-        <span data-i18n="note.medsConfirm">CHANGED: now shows an order summary and a phone number to call about mistakes; the message mentions you'll be notified by email or text.</span>
+        <span data-i18n="note.medsConfirm">Added a clear notice explaining that the request has not been submitted yet. A phone number is now shown for users who notice a mistake or need help. The message has been made clearer by explaining how the user will receive further updates.</span>
       </div>
       <div class="notice success">
         <svg class="n-ico" aria-hidden="true" style="color:var(--ok)"><use href="#i-check"/></svg>
@@ -514,7 +507,7 @@
       <hr class="section-rule" />
       <div class="sticky-note">
         <span class="note-pin" aria-hidden="true">📌</span>
-        <span data-i18n="note.chatType">CHANGED: questions to the GP and to the pharmacy are now two separate buttons (previously combined). Added a shortcut to make an appointment instead, and an urgent-situation warning with the practice phone number.</span>
+        <span data-i18n="note.chatType">The option to ask a question is now split into two clear choices: "Ask the GP" and "Ask the pharmacy." A shortcut has been added for users who want to book an appointment instead. The page now also shows a warning for urgent situations, including the practice phone number.</span>
       </div>
       <p class="speakable" data-i18n="chatType.lead">Who would you like to contact?</p>
       <div class="action-grid">
@@ -741,6 +734,6 @@
     </div>
   </div>
 
-  <script src="js/app.js?v=20260628-notes6"></script>
+  <script src="js/app.js?v=20260628-multi2"></script>
 </body>
 </html>

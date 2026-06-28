@@ -270,7 +270,6 @@ h2 { font-size: 1.4rem; margin: 1.4rem 0 0.6rem; }
 }
 .tile[disabled] { cursor: not-allowed; }
 .tile[disabled]:hover { background: var(--teal); }
-.tile .tile-hint { display: block; font-size: 0.78em; font-weight: 400; opacity: 0.85; margin-top: 0.1rem; }
 
 @media (max-width: 720px) {
   .tiles { grid-template-columns: repeat(2, 1fr); }
@@ -388,6 +387,12 @@ html[data-theme="contrast"] .btn.secondary { background: #fff; color: var(--slat
 .option.selected .opt-mark::after {
   content: ""; width: 0.85rem; height: 0.85rem;
   background: var(--teal); border-radius: 50%;
+}
+/* Checkbox-style mark for multi-select option lists (e.g. ordering several medicines) */
+.opt-mark.checkbox { border-radius: 5px; }
+.option.selected .opt-mark.checkbox::after {
+  content: "\2713"; width: auto; height: auto;
+  background: none; color: var(--teal); font-size: 1.1rem; font-weight: 700; line-height: 1;
 }
 .option .option-text {
   display: flex;
@@ -785,8 +790,6 @@ html[data-view-mode="guided"] .guided-home { display: block; }
 .guided-tile[disabled] { cursor: not-allowed; opacity: 0.75; }
 .guided-tile[disabled]:hover { background: var(--teal); }
 .guided-ico { width: 3.4rem; height: 3.4rem; flex: none; }
-.guided-tile-text { display: flex; flex-direction: column; gap: 0.3rem; }
-.guided-tile-text small { font-size: 0.7em; font-weight: 400; opacity: 0.85; }
 .guided-badge {
   position: absolute; top: 0.75rem; right: 1rem;
   background: var(--ok); color: #fff; border-radius: 50%;
