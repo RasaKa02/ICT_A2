@@ -986,3 +986,25 @@ html[data-view-mode="guided"] .action-btn {
 }
 html[data-view-mode="guided"] .action-btn:hover { background: #063a44; border-color: #063a44; }
 html[data-view-mode="guided"] .action-btn.ghost { background: #fff; color: #084d56; }
+
+/* =============================================================
+   Change-tracking sticky notes (toggled via the pin button)
+   ============================================================= */
+.sticky-note { display: none; }
+html[data-notes="on"] .sticky-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  background: #fff3b0;
+  border: 1px solid #d4af1f;
+  border-radius: 3px;
+  padding: 0.7rem 0.95rem;
+  margin: 1rem 0;
+  font-size: 0.92rem;
+  line-height: 1.45;
+  color: #4a3f00;
+  box-shadow: 2px 4px 8px rgba(0,0,0,0.2);
+  transform: rotate(-0.6deg);
+}
+html[data-notes="on"] .view > .sticky-note:nth-of-type(even) { transform: rotate(0.6deg); }
+.sticky-note .note-pin { font-size: 1.1rem; flex: none; line-height: 1.3; }

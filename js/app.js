@@ -14,6 +14,7 @@
       "bar.language": "Language", "bar.textsize": "Text size",
       "bar.contrast": "High contrast", "bar.readaloud": "Read aloud",
       "bar.tour": "Step by step instructions", "bar.stopspeak": "Stop reading",
+      "bar.notes": "Show change notes",
       "loggedin": "You are logged in as:",
       "banner.offeredby": "Offered by:",
       "login.title": "Sign in", "login.intro": "Enter your name and password to continue.",
@@ -140,11 +141,7 @@
       "meds.medOtherInputLabel": "Which medicine do you need?",
       "meds.medUnsure": "I'm not sure which medicine I need",
       "meds.medUnsureHint": "The practice will contact you to discuss this",
-      "meds.unsureHelp": "Not sure about your medication? Call the practice or pharmacy:",
-      "meds.usageTitle": "How to use this medicine",
-      "meds.usageSalbutamol": "Shake the inhaler well. Breathe out fully, put the mouthpiece in your mouth and breathe in slowly while pressing down once. Hold your breath for 10 seconds. Use only when needed, up to 8 puffs a day unless your GP says otherwise.",
-      "meds.usageLisinopril": "Take one tablet once a day, at the same time each day, with or without food. Swallow the tablet with a glass of water. Do not stop taking this medicine suddenly without talking to your GP.",
-      "meds.usageUnknown": "Contact the GP practice or pharmacy. They can help you work out the right medicine.",
+      "meds.unsureHelp": "Unsure about your medication or how to use it? Call the practice or pharmacy:",
       "meds.notOnList": "(not on the list)",
       "meds.toDiscuss": "Not sure — to discuss with the practice",
       "meds.confirmCallNote": "Made a mistake? Call us:",
@@ -154,8 +151,7 @@
       "chatType.gp": "Ask the GP a question<small>Medical questions or complaints</small>",
       "chatType.pharmacy": "Ask the pharmacy a question<small>Questions about your medicines</small>",
       "chatType.apptOption": "I'd like to make an appointment instead<small>Skip the message — book a time directly</small>",
-      "chatType.urgent": "Is it urgent? Always call the practice. Call 112 for life-threatening situations.",
-      "chatType.callLabel": "Call the practice:",
+      "chatType.urgent": "Is it urgent? Always call the GP: <a href=\"tel:0725613913\">072-561 3913</a>. Call 112 for life-threatening situations.",
 
       "chatCategory.title": "What is your question about?",
       "chatCategory.lead": "Choose the option that fits best.",
@@ -199,12 +195,24 @@
       "welcome.guided.intro": "This website is made easier to use. The toolbar at the top of the screen contains <b>Read aloud</b> and <b>Step by step instructions</b>.",
       "welcome.guided.li1": "Other settings, such as <b>high contrast</b>, <b>language</b>, and <b>text size</b>, can be found in <b>Settings</b>.",
       "welcome.close": "Start using the portal",
-      "tour.close": "Close"
+      "tour.close": "Close",
+
+      "note.home": "NEW: added a short subtitle clarifying this tile covers GP, assistant, and pharmacy questions.",
+      "note.apptAdvice": "CHANGED: a phone number is now always shown here, whatever the advice. A notice was added stating no appointment has been booked yet, naming the actual button below. When a GP appointment is not recommended, it is possible to schedule one anyway with the \"Schedule an appointment\" button instead of \"I would still like an appointment\".",
+      "note.chatType": "CHANGED: questions to the GP and to the pharmacy are now two separate buttons (previously combined). Added a shortcut to make an appointment instead, and an urgent-situation warning with the practice phone number.",
+      "note.chatCategory": "NEW SCREEN: choose what your question is about from several options. \"A new question or complaint\" was renamed to \"Ask a new question\".",
+      "note.chatForm": "CHANGED: the subject field now fills in automatically based on the topic you chose, with matching suggestion chips. The button now leads to a review screen instead of sending right away.",
+      "note.chatReview": "NEW SCREEN: review everything before sending — nothing has been sent yet at this point.",
+      "note.chatConfirm": "CHANGED: the confirmation now shows who/what it was about and a concrete reply-by date, and makes clear the answer appears in this portal.",
+      "note.medsWhat": "CHANGED: added \"not in this list\" and \"not sure\" options, a simple dosage instruction under each medicine, and a phone number for when you're unsure about your medication or how to use it.",
+      "note.medsCheck": "CHANGED: added a notice making clear this is only an overview and nothing has been sent yet.",
+      "note.medsConfirm": "CHANGED: now shows an order summary and a phone number to call about mistakes; the message mentions you'll be notified by email or text."
     },
     nl: {
       "bar.language": "Taal", "bar.textsize": "Tekstgrootte",
       "bar.contrast": "Hoog contrast", "bar.readaloud": "Voorlezen",
       "bar.tour": "Laat zien hoe", "bar.stopspeak": "Stop voorlezen",
+      "bar.notes": "Wijzigingsnotities tonen",
       "loggedin": "U bent aangemeld als:",
       "banner.offeredby": "Aangeboden door:",
       "login.title": "Aanmelden", "login.intro": "Vul uw naam en wachtwoord in om verder te gaan.",
@@ -331,11 +339,7 @@
       "meds.medOtherInputLabel": "Welk medicijn heeft u nodig?",
       "meds.medUnsure": "Ik weet niet zeker welk medicijn ik nodig heb",
       "meds.medUnsureHint": "De praktijk neemt contact met u op om dit te bespreken",
-      "meds.unsureHelp": "Twijfelt u over uw medicatie? Bel de praktijk of apotheek:",
-      "meds.usageTitle": "Hoe gebruikt u dit medicijn",
-      "meds.usageSalbutamol": "Schud de inhalator goed. Adem volledig uit, plaats het mondstuk in uw mond en adem langzaam in terwijl u één keer indrukt. Houd uw adem 10 seconden in. Gebruik alleen wanneer nodig, maximaal 8 pufjes per dag, tenzij uw huisarts iets anders zegt.",
-      "meds.usageLisinopril": "Neem één keer per dag één tablet in, elke dag op hetzelfde moment, met of zonder voedsel. Slik de tablet door met een glas water. Stop niet plotseling met dit medicijn zonder dit met uw huisarts te overleggen.",
-      "meds.usageUnknown": "Neem contact op met de huisartsenpraktijk of apotheek. Zij helpen u de juiste medicatie te bepalen.",
+      "meds.unsureHelp": "Twijfelt u over uw medicatie of hoe u het moet gebruiken? Bel de praktijk of apotheek:",
       "meds.notOnList": "(niet op de lijst)",
       "meds.toDiscuss": "Niet zeker — te bespreken met de praktijk",
       "meds.confirmCallNote": "Foutje gemaakt? Bel ons:",
@@ -345,8 +349,7 @@
       "chatType.gp": "Stel een vraag aan de huisarts<small>Medische vragen of klachten</small>",
       "chatType.pharmacy": "Stel een vraag aan de apotheek<small>Vragen over uw medicijnen</small>",
       "chatType.apptOption": "Ik wil liever een afspraak maken<small>Geen bericht nodig — plan direct een tijd</small>",
-      "chatType.urgent": "Is het spoed? Bel altijd de praktijk. Bel 112 bij levensgevaar.",
-      "chatType.callLabel": "Bel de praktijk:",
+      "chatType.urgent": "Is het spoed? Bel altijd de huisarts: <a href=\"tel:0725613913\">072-561 3913</a>. Bel 112 bij levensgevaar.",
 
       "chatCategory.title": "Waar gaat uw vraag over?",
       "chatCategory.lead": "Kies de optie die het beste past.",
@@ -648,7 +651,8 @@
     size: LS.getItem("mg_size") || "1",
     contrast: LS.getItem("mg_contrast") === "1",
     readaloud: LS.getItem("mg_readaloud") === "1",
-    viewMode: LS.getItem("mg_view") || "standard"
+    viewMode: LS.getItem("mg_view") || "standard",
+    notesOn: LS.getItem("mg_notes") === null ? true : LS.getItem("mg_notes") === "1"
   };
   var qIndex = 0, qAnswers = [];
   var chosenDay = null, chosenTime = null;
@@ -722,6 +726,10 @@
     $("#btn-readaloud").setAttribute("aria-pressed", String(state.readaloud));
     $("#btn-stopspeak").classList.toggle("sr-only", !state.readaloud);
     refreshSpeakButtons();
+  }
+  function applyNotes() {
+    document.documentElement.setAttribute("data-notes", state.notesOn ? "on" : "off");
+    $("#btn-notes").setAttribute("aria-pressed", String(state.notesOn));
   }
   function updateModeIndicator() {
     var isGuided = state.viewMode === "guided";
@@ -974,18 +982,6 @@
     if (id === "gp") return t("meds.pickup3") + " - " + t("meds.pickup3d");
     return "";
   }
-  function renderMedicineUsage(id) {
-    var box = $("#meds-usage-instructions");
-    if (!box) return;
-    if (!id) { box.style.display = "none"; box.innerHTML = ""; return; }
-    var body = id === "salbutamol" ? t("meds.usageSalbutamol")
-             : id === "lisinopril" ? t("meds.usageLisinopril")
-             : t("meds.usageUnknown");
-    box.style.display = "block";
-    box.innerHTML = '<h2 class="speakable">' + escapeHtml(t("meds.usageTitle")) + "</h2>" +
-      '<p class="speakable">' + escapeHtml(body) + "</p>";
-    refreshSpeakButtons();
-  }
   function updateMedsWhatNext() {
     var ok = !!chosenMedicine;
     if (chosenMedicine === "other") ok = !!(chosenMedicineOther && chosenMedicineOther.trim());
@@ -999,7 +995,6 @@
     var otherField = $("#meds-other-field");
     if (otherField) otherField.style.display = id === "other" ? "block" : "none";
     if (id !== "other") chosenMedicineOther = "";
-    renderMedicineUsage(id);
     updateMedsWhatNext();
   }
   function selectPickup(id) {
@@ -1029,7 +1024,6 @@
     if (otherField) otherField.style.display = "none";
     var otherInput = $("#meds-other-input");
     if (otherInput) otherInput.value = "";
-    renderMedicineUsage(null);
   }
   function renderMedicineCheck() {
     var box = $("#meds-check-summary");
@@ -1284,7 +1278,7 @@
   /* ---------------- Wire up events ---------------- */
   function init() {
     // restore persisted state
-    applyLang(); applySize(); applyContrast(); applyReadaloud();
+    applyLang(); applySize(); applyContrast(); applyReadaloud(); applyNotes();
     document.documentElement.setAttribute("data-current-view", "home");
 
     // navigation buttons (data-go)
@@ -1314,7 +1308,6 @@
         if (active === "appt-q") renderQuestion();
         if (active === "appt-advice") renderAdvice();
         if (active === "appt-slots") renderSlots();
-        if (active === "meds-what") renderMedicineUsage(chosenMedicine);
         if (active === "meds-check") renderMedicineCheck();
         if (active === "meds-confirm") renderMedicineConfirm();
         if (active === "chat-form") renderChatFormChips();
@@ -1347,6 +1340,13 @@
       applyReadaloud();
     });
     $("#btn-stopspeak").addEventListener("click", stopSpeaking);
+
+    // change notes (sticky notes) toggle
+    $("#btn-notes").addEventListener("click", function () {
+      state.notesOn = !state.notesOn;
+      LS.setItem("mg_notes", state.notesOn ? "1" : "0");
+      applyNotes();
+    });
 
     // questionnaire nav
     $("#q-next").addEventListener("click", nextQuestion);
