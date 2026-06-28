@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="nl" data-theme="default">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MijnGezondheid.net — toegankelijk / accessible</title>
+  <link rel="stylesheet" href="css/styles.css?v=20260619-meds3" />
+</head>
+<body>
+
+  <!-- ================= Inline SVG icon sprite ================= -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="i-logo" viewBox="0 0 24 24"><circle cx="8" cy="9" r="3.4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="15.5" cy="7" r="2.6" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="13" cy="14" r="3" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+    <symbol id="i-home" viewBox="0 0 24 24"><path d="M4 11l8-6 8 6v8a1 1 0 0 1-1 1h-4v-5h-6v5H5a1 1 0 0 1-1-1z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3 9h18M8 3v4M16 3v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="16" cy="15" r="3.2" fill="currentColor"/></symbol>
+    <symbol id="i-pills" viewBox="0 0 24 24"><rect x="3" y="9" width="11" height="6" rx="3" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17" cy="14" r="4.5" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-4 4z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="9" cy="10.5" r="1" fill="currentColor"/><circle cx="13" cy="10.5" r="1" fill="currentColor"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24"><path d="M7 3h7l5 5v13H7z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M14 3v5h5M9 13h6M9 16h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+    <symbol id="i-path" viewBox="0 0 24 24"><path d="M6 19a3 3 0 1 0 0-6h8a3 3 0 1 0 0-6" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M18 4l2 3-2 3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-doctor" viewBox="0 0 24 24"><circle cx="12" cy="7" r="3.2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M5 20a7 7 0 0 1 14 0" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 14v3M10.5 15.5h3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+    <symbol id="i-news" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="14" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M7 9h6M7 12h6M7 15h4M16 9h1M16 12h1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+    <symbol id="i-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-3 2a11 11 0 0 0 5 5l2-3 5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" fill="currentColor"/></symbol>
+    <symbol id="i-speaker" viewBox="0 0 24 24"><path d="M4 9v6h4l5 4V5L8 9z" fill="currentColor"/><path d="M16 8a5 5 0 0 1 0 8M18.5 5.5a9 9 0 0 1 0 13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 13l4 4 10-11" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-warn" viewBox="0 0 24 24"><path d="M12 3l9 16H3z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M12 9v5M12 17h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 11v5M12 8h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-history" viewBox="0 0 24 24"><path d="M4 12a8 8 0 1 0 2.5-5.8M4 4v3h3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 8v4l3 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 4v10M8 12l4 4 4-4M5 20h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  </svg>
+
+  <!-- ================= Accessibility toolbar ================= -->
+  <div class="a11y-bar" role="region" aria-label="Accessibility options">
+    <button type="button" id="btn-readaloud" aria-pressed="false">
+      <svg aria-hidden="true" width="18" height="18"><use href="#i-speaker"/></svg>
+      <span data-i18n="bar.readaloud">Read aloud</span>
+    </button>
+    <button type="button" id="btn-tour" data-i18n="bar.tour">Step by step instructions</button>
+    <button type="button" id="btn-stopspeak" class="sr-only" data-i18n="bar.stopspeak">Stop reading</button>
+  </div>
+
+
+  <div class="dash-top">
+
+    <!-- Pink hero banner (offered-by + staff illustration) -->
+    <div class="hero">
+<div class="hero-body">
+        <span class="offered-by" data-i18n="banner.offeredby">Offered by:</span>
+        <div class="practice-card">
+          <svg class="home-ico" aria-hidden="true"><use href="#i-home"/></svg>
+          <div>
+            <a href="#" class="practice-name" onclick="return false">Huisartsenpraktijk Koedijk</a>
+            <span class="phone">072-561 3913</span>
+          </div>
+        </div>
+      </div>
+      <!-- Staff illustration -->
+      <svg class="hero-art" viewBox="0 0 300 180" aria-hidden="true" focusable="false">
+        <!-- doctor (left) -->
+        <g transform="translate(26,16)">
+          <rect x="2" y="82" width="58" height="78" rx="20" fill="#7ec9d2"/>
+          <rect x="44" y="86" width="18" height="60" rx="9" fill="#6dbcc6"/>
+          <circle cx="31" cy="46" r="25" fill="#ecc4a0"/>
+          <path d="M7 44a24 24 0 0 1 48 0c0-17-11-25-24-25S7 27 7 44z" fill="#3b4047"/>
+          <path d="M22 95c-1 16 5 27 9 27s10-11 9-27" fill="none" stroke="#2f3a41" stroke-width="3"/>
+          <circle cx="40" cy="124" r="4.5" fill="#2f3a41"/>
+        </g>
+        <!-- older patient (centre, seated) -->
+        <g transform="translate(108,30)">
+          <rect x="4" y="76" width="62" height="74" rx="22" fill="#b9c2c8"/>
+          <circle cx="35" cy="44" r="24" fill="#ecc4a0"/>
+          <path d="M11 42a24 24 0 0 1 48 0c0-16-11-24-24-24S11 26 11 42z" fill="#d7dde1"/>
+          <rect x="6" y="118" width="26" height="14" rx="7" fill="#fff"/>
+        </g>
+        <!-- pharmacist (right) -->
+        <g transform="translate(196,18)">
+          <rect x="2" y="82" width="58" height="78" rx="20" fill="#e98fb8"/>
+          <rect x="0" y="86" width="18" height="58" rx="9" fill="#df7fac"/>
+          <circle cx="31" cy="46" r="25" fill="#e9bd97"/>
+          <path d="M6 50c-2-22 12-32 25-32s27 10 25 32c-4-10-9-12-13-9-5 4-12 5-18 2-6-3-13-2-19 7z" fill="#34404a"/>
+          <rect x="20" y="40" width="22" height="12" rx="3" fill="none" stroke="#34404a" stroke-width="2"/>
+          <rect x="42" y="96" width="20" height="26" rx="3" fill="#fff"/>
+          <path d="M52 100v18M44 109h16" stroke="#16a5b4" stroke-width="2.4" stroke-linecap="round"/>
+        </g>
+      </svg>
+    </div>
+
+    <!-- Logged-in row with avatar -->
+    <div class="login-row">
+      <p class="logged-in">
+        <span data-i18n="loggedin">U bent aangemeld als:</span>
+        <strong class="user-name" id="display-name"></strong>
+      </p>
+      <button type="button" id="btn-logout" class="logout-btn" data-i18n="login.logout">Afmelden</button>
+      <span class="avatar" aria-hidden="true">
+        <svg viewBox="0 0 64 64"><circle cx="32" cy="24" r="13" fill="#c2c8cc"/><path d="M8 60a24 24 0 0 1 48 0z" fill="#c2c8cc"/></svg>
+      </span>
+    </div>
+
+  </div>
+
+  <!-- ================= Main / views ================= -->
+  <main>
+
+    <!-- ---------- HOME ---------- -->
+    <section class="view is-active" data-view="home" aria-label="Home">
+      <div class="tiles">
+        <button class="tile" data-go="appt-landing" id="tile-appt">
+          <svg class="tile-ico" aria-hidden="true"><use href="#i-calendar"/></svg>
+          <span data-i18n="tile.appt">Make and view appointments</span>
+        </button>
+        <button class="tile" data-go="meds-home" id="tile-meds">
+          <svg class="tile-ico" aria-hidden="true"><use href="#i-pills"/></svg>
+          <span data-i18n="tile.medicines">Mijn medicijnen</span>
+        </button>
+        <button class="tile" data-go="chat-type" id="tile-chat">
+          <span class="tile-badge">2</span>
+          <svg class="tile-ico" aria-hidden="true"><use href="#i-chat"/></svg>
+          <span data-i18n="tile.chat">Ask the GP / pharmacy</span>
+        </button>
+        <button class="tile" disabled id="tile-files">
+          <svg class="tile-ico" aria-hidden="true"><use href="#i-file"/></svg>
+          <span data-i18n="tile.file">My file</span>
+        </button>
+        <button class="tile" disabled>
+          <svg class="tile-ico" aria-hidden="true"><use href="#i-path"/></svg>
+          <span data-i18n="tile.paths">My care paths</span>
+        </button>
+        <button class="tile" disabled>
+          <svg class="tile-ico" aria-hidden="true"><use href="#i-doctor"/></svg>
+          <span data-i18n="tile.details">GP / pharmacy details</span>
+        </button>
+        <button class="tile" disabled>
+          <svg class="tile-ico" aria-hidden="true"><use href="#i-news"/></svg>
+          <span data-i18n="tile.news">News</span>
+        </button>
+        <button class="tile" data-go="settings">
+          <svg class="tile-ico" aria-hidden="true"><use href="#i-gear"/></svg>
+          <span data-i18n="tile.settings">Settings</span>
+        </button>
+      </div>
+
+      <!-- ===== GUIDED HOME LAYOUT (only visible in guided mode) ===== -->
+      <div class="guided-home">
+
+        <!-- All tiles visible directly -->
+        <div class="guided-main-tiles">
+          <button class="guided-tile" data-go="appt-landing" id="gtile-appt">
+            <svg class="guided-ico" aria-hidden="true"><use href="#i-calendar"/></svg>
+            <span data-i18n="tile.appt">Afspraak maken en bekijken</span>
+          </button>
+          <button class="guided-tile" data-go="meds-home" id="gtile-meds">
+            <svg class="guided-ico" aria-hidden="true"><use href="#i-pills"/></svg>
+            <span data-i18n="tile.medicines">Mijn medicijnen</span>
+          </button>
+          <button class="guided-tile" data-go="chat-type" id="gtile-chat">
+            <span class="guided-badge">2</span>
+            <svg class="guided-ico" aria-hidden="true"><use href="#i-chat"/></svg>
+            <span data-i18n="tile.chat">Vraag aan huisarts / apotheek</span>
+          </button>
+          <button class="guided-tile" disabled id="gtile-files">
+            <svg class="guided-ico" aria-hidden="true"><use href="#i-file"/></svg>
+            <span data-i18n="tile.file">Mijn dossier</span>
+          </button>
+          <button class="guided-tile" disabled id="gtile-care">
+            <svg class="guided-ico" aria-hidden="true"><use href="#i-path"/></svg>
+            <span data-i18n="tile.paths">Mijn zorgpaden</span>
+          </button>
+          <button class="guided-tile" disabled id="gtile-gp">
+            <svg class="guided-ico" aria-hidden="true"><use href="#i-doctor"/></svg>
+            <span data-i18n="tile.details">Gegevens huisarts / apotheek</span>
+          </button>
+          <button class="guided-tile" disabled id="gtile-news">
+            <svg class="guided-ico" aria-hidden="true"><use href="#i-news"/></svg>
+            <span data-i18n="tile.news">Nieuws</span>
+          </button>
+          <button class="guided-tile" data-go="settings" id="gtile-settings">
+            <svg class="guided-ico" aria-hidden="true"><use href="#i-gear"/></svg>
+            <span data-i18n="tile.settings">Instellingen</span>
+          </button>
+        </div>
+
+      </div><!-- /guided-home -->
+
+    </section>
+
+    <!-- ---------- APPOINTMENT: landing ---------- -->
+    <section class="view" data-view="appt-landing" aria-label="Appointments">
+      <h1 class="speakable" data-i18n="apptLanding.title">Make and view appointments</h1>
+      <hr class="section-rule" />
+      <div class="action-grid">
+        <button class="action-btn" data-go="appt-intro" id="appt-make-btn">
+          <svg class="ab-ico" aria-hidden="true"><use href="#i-calendar"/></svg>
+          <span data-i18n="apptLanding.make">Make an appointment</span>
+        </button>
+        <button class="action-btn ghost" disabled id="appt-history-btn">
+          <svg class="ab-ico" aria-hidden="true"><use href="#i-history"/></svg>
+          <span data-i18n="apptLanding.history">View past appointments</span>
+        </button>
+      </div>
+      <h2 data-i18n="apptLanding.upcoming">Your upcoming appointments</h2>
+      <div class="card flat" id="appt-upcoming-card">
+        <p class="muted speakable" data-i18n="apptLanding.none">No upcoming appointments have been found for you.</p>
+      </div>
+      <button class="link-back" data-go="home" data-i18n="back.home" id="appt-back-home">Back to home</button>
+    </section>
+
+    <!-- ---------- APPOINTMENT: intro ---------- -->
+    <section class="view" data-view="appt-intro" aria-label="Prepare for appointment">
+      <h1 class="speakable" data-i18n="apptIntro.title">Preparing for your appointment</h1>
+      <hr class="section-rule" />
+      <div class="card" id="appt-intro-card">
+        <p class="speakable" data-i18n="apptIntro.lead">Your GP would like you to answer a few simple questions about your complaint first.</p>
+        <p class="muted speakable" data-i18n="apptIntro.sub">This helps us give you the right advice, or book the right appointment for you. It takes about 2 minutes.</p>
+        <div class="notice warn" id="appt-intro-urgent">
+          <svg class="n-ico" aria-hidden="true"><use href="#i-warn"/></svg>
+          <span class="speakable" data-i18n="apptIntro.urgent">Is it urgent? Always call your GP for urgent questions. Call 112 for life-threatening situations.</span>
+        </div>
+      </div>
+      <button class="btn block" data-go="appt-q" id="btn-start-q" data-i18n="apptIntro.start">Start the questions</button>
+      <div class="call-hatch" id="appt-intro-call">
+        <svg class="n-ico" aria-hidden="true" style="color:var(--magenta)"><use href="#i-phone"/></svg>
+        <span class="speakable" data-i18n="apptIntro.prefer">Prefer to speak to a person? Call the practice:</span>
+        <a href="tel:0725613913">072-561 3913</a>
+      </div>
+      <button class="link-back" data-go="appt-landing" data-i18n="back.prev">Back to previous page</button>
+    </section>
+
+    <!-- ---------- APPOINTMENT: questionnaire ---------- -->
+    <section class="view" data-view="appt-q" aria-label="Questions">
+
+      <!-- Guided mode: one question at a time (large buttons) -->
+      <div id="q-guided-mode">
+        <h1 class="speakable" data-i18n="apptQ.title">A few questions</h1>
+        <hr class="section-rule" />
+        <div class="progress">
+          <div class="progress-track"><div class="progress-fill" id="q-progress-fill"></div></div>
+          <span class="progress-text" id="q-progress-text"></span>
+        </div>
+        <div class="card" id="appt-question"><!-- JS renders one question here --></div>
+      </div>
+
+      <!-- Standard mode: all questions at once -->
+      <div id="q-standard-mode">
+        <h1 class="speakable" data-i18n="apptQ.title">A few questions</h1>
+        <hr class="section-rule" />
+        <div class="q-form-header">
+          <span data-i18n="apptQ.provider">Huisartsenpraktijk Koedijk</span>
+          <button type="button" class="q-form-header-x" data-go="appt-landing" aria-label="Close">&#x2715;</button>
+        </div>
+        <div class="q-form-section-label" data-i18n="apptQ.sectionLabel">Questions</div>
+        <div class="q-form-body" id="q-all-questions"><!-- JS renders all questions here --></div>
+        <div id="q-complete-notice" style="display:none"></div>
+      </div>
+
+      <div class="btn-row">
+        <button class="btn secondary grow" id="q-prev" data-i18n="nav.previous">Previous</button>
+        <button class="btn grow" id="q-next" data-i18n="nav.next">Next</button>
+      </div>
+      <div class="call-hatch">
+        <svg class="n-ico" aria-hidden="true" style="color:var(--magenta)"><use href="#i-phone"/></svg>
+        <span class="speakable" data-i18n="apptQ.hatch">This is too much? You can always call the practice instead:</span>
+        <a href="tel:0725613913">072-561 3913</a>
+      </div>
+      <div class="q-back-link">
+        <a href="#" data-go="appt-intro" data-i18n="apptQ.backLink">Back to the instruction page</a>
+      </div>
+    </section>
+
+    <!-- ---------- APPOINTMENT: advice (rendered by JS) ---------- -->
+    <section class="view" data-view="appt-advice" aria-label="Your advice">
+      <h1 class="speakable" data-i18n="apptAdvice.title">Your personal advice</h1>
+      <hr class="section-rule" />
+      <div id="appt-advice-content"><!-- JS renders the result here --></div>
+      <button class="link-back" data-go="home" data-i18n="back.home">Back to home</button>
+    </section>
+
+    <!-- ---------- APPOINTMENT: choose slot ---------- -->
+    <section class="view" data-view="appt-slots" aria-label="Choose day and time">
+      <h1 class="speakable" data-i18n="apptSlots.title">Choose a day and a time</h1>
+      <hr class="section-rule" />
+      <div class="card">
+        <h2 data-i18n="apptSlots.day">1. Choose a day</h2>
+        <div class="slot-grid" id="slot-days"></div>
+        <h2 data-i18n="apptSlots.time">2. Choose a time</h2>
+        <div class="slot-grid" id="slot-times"></div>
+      </div>
+      <button class="btn block" id="btn-book" disabled data-i18n="apptSlots.confirm">Confirm this appointment</button>
+      <button class="link-back" data-go="appt-advice" data-i18n="back.prev">Back to previous page</button>
+    </section>
+
+    <!-- ---------- APPOINTMENT: confirmation ---------- -->
+    <section class="view" data-view="appt-confirm" aria-label="Appointment booked">
+      <h1 class="speakable" data-i18n="apptConfirm.title">Your appointment is booked</h1>
+      <hr class="section-rule" />
+      <div class="notice success">
+        <svg class="n-ico" aria-hidden="true" style="color:var(--ok)"><use href="#i-check"/></svg>
+        <span class="speakable" data-i18n="apptConfirm.msg">Thank you. Your appointment has been booked. You will also receive a confirmation message.</span>
+      </div>
+      <div class="card">
+        <p><strong data-i18n="apptConfirm.when">When:</strong> <span id="confirm-when"></span></p>
+        <p><strong data-i18n="apptConfirm.where">Where:</strong> Huisartsenpraktijk Koedijk</p>
+      </div>
+      <button class="btn block" data-go="home" data-i18n="back.home">Back to home</button>
+    </section>
+
+    <!-- ---------- MEDICINES: landing ---------- -->
+    <section class="view" data-view="meds-home" aria-label="My medicines">
+      <h1 class="speakable" data-i18n="meds.title">Mijn medicijnen</h1>
+      <hr class="section-rule" />
+      <div class="notice info">
+        <svg class="n-ico" aria-hidden="true"><use href="#i-info"/></svg>
+        <span class="speakable" data-i18n="meds.lead">Herhaalmedicatie aanvragen, uw medicijnoverzicht bekijken en uw medicijndocumenten bekijken.</span>
+      </div>
+      <h2 data-i18n="meds.choose">Kies een onderdeel van uw medicatie</h2>
+      <div class="action-grid">
+        <button class="action-btn" data-go="meds-what" id="meds-order-btn">
+          <svg class="ab-ico" aria-hidden="true"><use href="#i-pills"/></svg>
+          <span data-i18n="meds.order">Medicijnen bestellen</span>
+        </button>
+        <button class="action-btn" disabled>
+          <svg class="ab-ico" aria-hidden="true"><use href="#i-pills"/></svg>
+          <span data-i18n="meds.overview">Medicijnoverzicht</span>
+        </button>
+        <button class="action-btn" disabled>
+          <svg class="ab-ico" aria-hidden="true"><use href="#i-file"/></svg>
+          <span data-i18n="meds.documents">Medicijndocumenten</span>
+        </button>
+      </div>
+      <button class="link-back" data-go="home" data-i18n="back.home">Terug naar home</button>
+    </section>
+
+    <!-- ---------- MEDICINES: what ---------- -->
+    <section class="view" data-view="meds-what" aria-label="Choose medicine">
+      <h1 class="speakable" data-i18n="meds.orderTitle">Medicijnen bestellen</h1>
+      <hr class="section-rule" />
+      <p class="med-step-status speakable" data-i18n="meds.status.what">Stap 1 van 3: kies het medicijn</p>
+      <h2 class="speakable" data-i18n="meds.whatTitle">Welk medicijn wilt u bestellen?</h2>
+      <div class="options" role="group" id="meds-medicine-options">
+        <button type="button" class="option med-choice" data-med="salbutamol" onclick="window.MGSelectMedicine && window.MGSelectMedicine('salbutamol')">
+          <span class="opt-mark" aria-hidden="true"></span>
+          <span class="option-text"><strong data-i18n="meds.med1">Salbutamol inhalator 100 microgram</strong><small data-i18n="meds.prescriptionOnly">Alleen verkrijgbaar op recept</small></span>
+        </button>
+        <button type="button" class="option med-choice" data-med="lisinopril" onclick="window.MGSelectMedicine && window.MGSelectMedicine('lisinopril')">
+          <span class="opt-mark" aria-hidden="true"></span>
+          <span class="option-text"><strong data-i18n="meds.med2">Lisinopril 10 mg tabletten</strong><small data-i18n="meds.prescriptionOnly">Alleen verkrijgbaar op recept</small></span>
+        </button>
+      </div>
+      <div class="btn-row">
+        <button class="btn secondary grow" data-go="meds-home" data-i18n="nav.previous">Vorige</button>
+        <button class="btn grow" id="meds-what-next" disabled data-i18n="nav.next" onclick="window.MGGoMedicineHow && window.MGGoMedicineHow()">Volgende</button>
+      </div>
+    </section>
+
+    <!-- ---------- MEDICINES: how ---------- -->
+    <section class="view" data-view="meds-how" aria-label="Choose pickup location">
+      <h1 class="speakable" data-i18n="meds.orderTitle">Medicijnen bestellen</h1>
+      <hr class="section-rule" />
+      <p class="med-step-status speakable" data-i18n="meds.status.how">Stap 2 van 3: kies waar u het ophaalt</p>
+      <h2 class="speakable" data-i18n="meds.howTitle">Hoe wilt u uw medicijn ophalen?</h2>
+      <div class="options" role="group" id="meds-pickup-options">
+        <button type="button" class="option pickup-choice" data-pickup="koedijk" onclick="window.MGSelectPickup && window.MGSelectPickup('koedijk')">
+          <span class="opt-mark" aria-hidden="true"></span>
+          <span class="option-text"><strong data-i18n="meds.pickup1">Ophalen bij Apotheek Koedijk</strong><small data-i18n="meds.pickup1d">Daalmeerpad 12, Koedijk</small></span>
+        </button>
+        <button type="button" class="option pickup-choice" data-pickup="alkmaar" onclick="window.MGSelectPickup && window.MGSelectPickup('alkmaar')">
+          <span class="opt-mark" aria-hidden="true"></span>
+          <span class="option-text"><strong data-i18n="meds.pickup2">Ophalen bij Apotheek Alkmaar Centrum</strong><small data-i18n="meds.pickup2d">Laat 88, Alkmaar</small></span>
+        </button>
+        <button type="button" class="option pickup-choice" data-pickup="gp" onclick="window.MGSelectPickup && window.MGSelectPickup('gp')">
+          <span class="opt-mark" aria-hidden="true"></span>
+          <span class="option-text"><strong data-i18n="meds.pickup3">Ophalen bij de huisartsenpraktijk</strong><small data-i18n="meds.pickup3d">Huisartsenpraktijk Koedijk, De Hertog 2</small></span>
+        </button>
+      </div>
+      <div class="btn-row">
+        <button class="btn secondary grow" data-go="meds-what" data-i18n="nav.previous">Vorige</button>
+        <button class="btn grow" id="meds-how-next" disabled data-i18n="nav.next" onclick="window.MGGoMedicineCheck && window.MGGoMedicineCheck()">Volgende</button>
+      </div>
+    </section>
+
+    <!-- ---------- MEDICINES: check ---------- -->
+    <section class="view" data-view="meds-check" aria-label="Check medicine order">
+      <h1 class="speakable" data-i18n="meds.checkTitle">Controleer uw bestelling</h1>
+      <hr class="section-rule" />
+      <p class="med-step-status speakable" data-i18n="meds.status.check">Stap 3 van 3: controleer en verstuur</p>
+      <div class="card" id="meds-check-summary"></div>
+      <div class="btn-row">
+        <button class="btn secondary grow" data-go="meds-how" data-i18n="nav.previous">Vorige</button>
+        <button class="btn grow" id="meds-submit" data-i18n="meds.submit" onclick="window.MGSubmitMedicine && window.MGSubmitMedicine()">Bestelling versturen</button>
+      </div>
+    </section>
+
+    <!-- ---------- MEDICINES: confirmation ---------- -->
+    <section class="view" data-view="meds-confirm" aria-label="Medicine order sent">
+      <h1 class="speakable" data-i18n="meds.confirmTitle">Uw bestelling is verstuurd</h1>
+      <hr class="section-rule" />
+      <div class="notice success">
+        <svg class="n-ico" aria-hidden="true" style="color:var(--ok)"><use href="#i-check"/></svg>
+        <span class="speakable" data-i18n="meds.confirmMsg">De praktijk controleert uw aanvraag. U krijgt een bericht wanneer uw medicijn klaarstaat.</span>
+      </div>
+      <div class="btn-row">
+        <button class="btn secondary grow" data-go="meds-home" data-i18n="meds.more">Terug naar mijn medicijnen</button>
+        <button class="btn grow" data-go="home" data-i18n="back.home">Terug naar home</button>
+      </div>
+    </section>
+
+    <!-- ---------- SETTINGS ---------- -->
+    <section class="view" data-view="settings" aria-label="Settings">
+      <h1 class="speakable" data-i18n="tile.settings">Instellingen</h1>
+      <hr class="section-rule" />
+
+      <!-- Language -->
+      <h2 data-i18n="settings.langTitle">Taal</h2>
+      <div class="settings-row">
+        <button type="button" class="settings-opt-btn" data-lang="nl" aria-pressed="true">NL — Nederlands</button>
+        <button type="button" class="settings-opt-btn" data-lang="en" aria-pressed="false">EN — English</button>
+      </div>
+
+      <!-- Contrast (standard mode only; guided always uses high-contrast tiles) -->
+      <div class="contrast-setting" id="contrast-setting">
+        <h2 data-i18n="settings.contrastTitle">Contrast</h2>
+        <button type="button" id="btn-contrast" class="settings-opt-btn contrast-toggle" aria-pressed="false" data-i18n="bar.contrast">Hoog contrast</button>
+        <p class="muted" data-i18n="settings.contrastDesc">Donkere tegels voor beter leesbaar contrast.</p>
+      </div>
+      <div class="guided-contrast-note" id="guided-contrast-note">
+        <p class="muted" data-i18n="settings.guidedContrast">Begeleide weergave gebruikt altijd hoog contrast op de tegels.</p>
+      </div>
+
+      <h2 data-i18n="settings.modeTitle">Weergave kiezen</h2>
+      <p class="speakable muted" data-i18n="settings.modeDesc">Kies hoe u het portaal wilt gebruiken.</p>
+      <div class="chooser-grid">
+        <button type="button" class="chooser-opt chooser-std" id="settings-std">
+          <span class="chooser-icon">&#9634;</span>
+          <strong data-i18n="chooser.std.title">Standaardweergave</strong>
+          <ul>
+            <li data-i18n="chooser.std.f1">Meer informatie op het scherm</li>
+            <li data-i18n="chooser.std.f2">Snellere navigatie</li>
+          </ul>
+        </button>
+        <button type="button" class="chooser-opt chooser-guided" id="settings-guided">
+          <span class="chooser-icon">&#9635;</span>
+          <strong data-i18n="chooser.guided.title">Begeleide weergave</strong>
+          <ul>
+            <li data-i18n="chooser.guided.f1">Grotere tekst</li>
+            <li data-i18n="chooser.guided.f2">Grotere knoppen</li>
+            <li data-i18n="chooser.guided.f3">Stap-voor-stap hulp</li>
+            <li data-i18n="chooser.guided.f4">Voorleesondersteuning</li>
+          </ul>
+        </button>
+      </div>
+      <button class="link-back" data-go="home" data-i18n="back.home">Terug naar home</button>
+    </section>
+
+    <!-- ---------- CHAT: choose type ---------- -->
+    <section class="view" data-view="chat-type" aria-label="Ask the GP">
+      <h1 class="speakable" data-i18n="chatType.title">Ask the GP or pharmacy</h1>
+      <hr class="section-rule" />
+      <p class="speakable" data-i18n="chatType.lead">What would you like to ask about?</p>
+      <div class="action-grid">
+        <button class="action-btn" data-go="chat-form">
+          <svg class="ab-ico" aria-hidden="true"><use href="#i-doctor"/></svg>
+          <span data-i18n="chatType.new">A new question or complaint<small>Something you have not discussed before</small></span>
+        </button>
+        <button class="action-btn ghost" data-go="chat-form">
+          <svg class="ab-ico" aria-hidden="true"><use href="#i-history"/></svg>
+          <span data-i18n="chatType.known">About something from before<small>A complaint you discussed earlier</small></span>
+        </button>
+      </div>
+      <button class="link-back" data-go="home" data-i18n="back.home">Back to home</button>
+    </section>
+
+    <!-- ---------- CHAT: form ---------- -->
+    <section class="view" data-view="chat-form" aria-label="Write your question">
+      <h1 class="speakable" data-i18n="chatForm.title">Write your question</h1>
+      <hr class="section-rule" />
+      <div class="card">
+        <div class="field">
+          <label for="chat-subject" data-i18n="chatForm.subjectLabel">1. What is your question about? <span class="hint">(a few words)</span></label>
+          <input type="text" id="chat-subject" />
+          <div class="example-chips" data-chip-target="chat-subject">
+            <button type="button" class="chip" data-i18n="chatForm.chip1">Repeat prescription</button>
+            <button type="button" class="chip" data-i18n="chatForm.chip2">Test results</button>
+            <button type="button" class="chip" data-i18n="chatForm.chip3">Skin rash</button>
+          </div>
+        </div>
+        <div class="field">
+          <label for="chat-message" data-i18n="chatForm.messageLabel">2. Write your question here <span class="hint">(in your own words)</span></label>
+          <textarea id="chat-message"></textarea>
+        </div>
+        <div class="field">
+          <label for="chat-attachment" data-i18n="chatForm.attachmentLabel">3. Add a file or picture <span class="hint">(optional)</span></label>
+          <input type="file" id="chat-attachment" accept="image/*,.pdf,.doc,.docx,.txt" />
+          <p class="file-instructions"><strong data-i18n="chatForm.attachmentStepLabel">Detailed instructions for this step:</strong><br><span data-i18n="chatForm.attachmentHint">- Press the "Choose File" button.<br>- Find the photo or document you want to send.<br>- Click on the photo or document once.<br>- Press "Open".<br>- The file name will appear next to the button.<br>- Continue with your message and press "Send my message".</span></p>
+        </div>
+        <div class="notice info">
+          <svg class="n-ico" aria-hidden="true" style="color:var(--teal-dark)"><use href="#i-info"/></svg>
+          <span class="speakable" data-i18n="chatForm.reply">A doctor's assistant usually replies within 2 working days. Your answer will appear in this portal.</span>
+        </div>
+      </div>
+      <button class="btn block" id="btn-send-chat" data-i18n="chatForm.send">Send my question</button>
+      <p class="muted" id="chat-error" role="alert" style="display:none" data-i18n="chatForm.error">Please write your question before sending.</p>
+      <button class="link-back" data-go="chat-type" data-i18n="back.prev">Back to previous page</button>
+    </section>
+
+    <!-- ---------- CHAT: confirmation ---------- -->
+    <section class="view" data-view="chat-confirm" aria-label="Question sent">
+      <h1 class="speakable" data-i18n="chatConfirm.title">Your question has been sent</h1>
+      <hr class="section-rule" />
+      <div class="notice success">
+        <svg class="n-ico" aria-hidden="true" style="color:var(--ok)"><use href="#i-check"/></svg>
+        <span class="speakable" data-i18n="chatConfirm.msg">Thank you. Your question has been sent to the practice. You will get an answer within 2 working days.</span>
+      </div>
+      <button class="btn block" data-go="home" data-i18n="back.home">Back to home</button>
+    </section>
+
+  </main>
+
+  <!-- ================= Idle help popup ================= -->
+  <div class="overlay" id="idle-popup" role="dialog" aria-modal="true" aria-labelledby="idle-title">
+    <div class="idle-card">
+      <p id="idle-title" class="idle-question" data-i18n="idle.title">Heeft u hulp nodig?</p>
+      <button type="button" id="idle-show" class="idle-btn primary" data-i18n="idle.show">Laat zien wat ik moet doen</button>
+      <button type="button" id="idle-read" class="idle-btn" data-i18n="idle.read">Instructies voorlezen</button>
+      <button type="button" id="idle-continue" class="idle-btn secondary" data-i18n="idle.continue">Ik ga zelf verder</button>
+    </div>
+  </div>
+
+  <!-- ================= Help overlay ================= -->
+  <div class="overlay" id="help-overlay" role="dialog" aria-modal="true" aria-labelledby="help-heading">
+    <div class="help-card">
+      <h2 id="help-heading" data-i18n="guided.helpBtn">Hulp</h2>
+      <p id="help-text" class="help-text speakable"></p>
+      <button class="btn block" id="help-close" data-i18n="help.close">Sluiten</button>
+    </div>
+  </div>
+
+  <!-- ================= Login overlay ================= -->
+  <div class="overlay" id="login-overlay" role="dialog" aria-modal="true" aria-labelledby="login-title">
+    <div class="login-card">
+      <h2 id="login-title" data-i18n="login.title">Aanmelden</h2>
+      <p data-i18n="login.intro">Vul uw naam en wachtwoord in om verder te gaan.</p>
+      <div class="field">
+        <label for="login-name" data-i18n="login.nameLabel">Uw naam</label>
+        <input type="text" id="login-name" autocomplete="name" />
+      </div>
+      <div class="field">
+        <label for="login-pass" data-i18n="login.passLabel">Wachtwoord</label>
+        <input type="password" id="login-pass" autocomplete="current-password" />
+      </div>
+      <p class="muted login-error" id="login-error" role="alert" style="display:none" data-i18n="login.error">Vul uw naam in om verder te gaan.</p>
+      <button class="btn block" id="btn-login" data-i18n="login.submit">Aanmelden</button>
+    </div>
+  </div>
+
+  <!-- ================= View chooser (after login) ================= -->
+  <div class="overlay" id="view-chooser" role="dialog" aria-modal="true" aria-labelledby="chooser-title">
+    <div class="chooser-card">
+      <h2 id="chooser-title" data-i18n="chooser.title">How would you like to use the portal?</h2>
+      <p class="muted" data-i18n="chooser.sub">You can change this later in Settings.</p>
+      <div class="chooser-grid">
+
+        <button type="button" class="chooser-opt chooser-std" id="choose-standard">
+          <span class="chooser-icon">&#9634;</span>
+          <strong data-i18n="chooser.std.title">Standard view</strong>
+          <ul>
+            <li data-i18n="chooser.std.f1">More information on screen</li>
+            <li data-i18n="chooser.std.f2">Faster navigation</li>
+          </ul>
+        </button>
+
+        <button type="button" class="chooser-opt chooser-guided" id="choose-guided">
+          <span class="chooser-icon">&#9635;</span>
+          <strong data-i18n="chooser.guided.title">Guided view</strong>
+          <ul>
+            <li data-i18n="chooser.guided.f1">Larger text</li>
+            <li data-i18n="chooser.guided.f2">Bigger buttons</li>
+            <li data-i18n="chooser.guided.f3">Step-by-step assistance</li>
+            <li data-i18n="chooser.guided.f4">Read-aloud support</li>
+          </ul>
+        </button>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= Welcome card (first visit) ================= -->
+  <div class="overlay" id="welcome-overlay" role="dialog" aria-modal="true" aria-labelledby="welcome-title">
+    <div class="welcome">
+      <h2 id="welcome-title" data-i18n="welcome.title">Welkom bij uw gezondheidsportaal</h2>
+      <p data-welcome-i18n="intro">Deze website is makkelijker gemaakt in gebruik. Bovenaan de website kunt u <b>Voorlezen</b> gebruiken om tekst op de pagina te horen.</p>
+      <ul>
+        <li data-welcome-i18n="li1">Andere instellingen, zoals <b>hoog contrast</b>, <b>taal</b> en <b>tekstgrootte</b>, vindt u bij <b>Instellingen</b>.</li>
+      </ul>
+      <button class="btn block" id="welcome-close" data-i18n="welcome.close">Begin met het portaal</button>
+    </div>
+  </div>
+
+  <!-- ================= Guided tour layer ================= -->
+  <div class="tour-dim" id="tour-dim"></div>
+  <div class="tour-highlight" id="tour-highlight" style="display:none"></div>
+  <div class="tour-tip" id="tour-tip" style="display:none" role="dialog" aria-live="polite">
+    <div class="tour-step" id="tour-step"></div>
+    <p id="tour-text"></p>
+    <div class="tour-controls">
+      <button class="btn secondary" id="tour-close" data-i18n="tour.close">Close</button>
+      <button class="btn secondary" id="tour-back" data-i18n="nav.previous">Previous</button>
+      <button class="btn" id="tour-next" data-i18n="nav.next">Next</button>
+    </div>
+  </div>
+
+  <script src="js/app.js?v=20260619-meds2"></script>
+</body>
+</html>
