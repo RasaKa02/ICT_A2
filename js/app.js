@@ -119,7 +119,9 @@
       "meds.checkTitle": "Check your order",
       "meds.prescriptionOnly": "Only available with a prescription",
       "meds.med1": "Salbutamol inhaler 100 micrograms",
+      "meds.med1Dose": "Use when needed, up to 8 puffs a day",
       "meds.med2": "Lisinopril 10 mg tablets",
+      "meds.med2Dose": "1 tablet per day",
       "meds.pickup1": "Pick up at Apotheek Koedijk",
       "meds.pickup1d": "Daalmeerpad 12, Koedijk",
       "meds.pickup2": "Pick up at Apotheek Alkmaar Centrum",
@@ -130,18 +132,19 @@
       "meds.summaryPickup": "Pickup location:",
       "meds.submit": "Submit order",
       "meds.confirmTitle": "Your order has been sent",
-      "meds.confirmMsg": "The practice will check your request. You will receive a message when your medicine is ready.",
+      "meds.confirmMsg": "Your medicine request has been sent to the GP practice. You will receive a message by email or text when you can pick it up.",
       "meds.more": "Back to my medicines",
-      "meds.notSubmittedNotice": "This is only an overview — your order has not been sent yet.",
+      "meds.notSubmittedNotice": "Check your request. Nothing has been sent yet.",
       "meds.medOther": "My medicine is not in this list",
       "meds.medOtherHint": "Tell us which medicine you mean",
       "meds.medOtherInputLabel": "Which medicine do you need?",
       "meds.medUnsure": "I'm not sure which medicine I need",
       "meds.medUnsureHint": "The practice will contact you to discuss this",
+      "meds.unsureHelp": "Not sure about your medication? Call the practice or pharmacy:",
       "meds.usageTitle": "How to use this medicine",
       "meds.usageSalbutamol": "Shake the inhaler well. Breathe out fully, put the mouthpiece in your mouth and breathe in slowly while pressing down once. Hold your breath for 10 seconds. Use only when needed, up to 8 puffs a day unless your GP says otherwise.",
       "meds.usageLisinopril": "Take one tablet once a day, at the same time each day, with or without food. Swallow the tablet with a glass of water. Do not stop taking this medicine suddenly without talking to your GP.",
-      "meds.usageUnknown": "We will send you instructions for this medicine once your request has been checked.",
+      "meds.usageUnknown": "Contact the GP practice or pharmacy. They can help you work out the right medicine.",
       "meds.notOnList": "(not on the list)",
       "meds.toDiscuss": "Not sure — to discuss with the practice",
       "meds.confirmCallNote": "Made a mistake? Call us:",
@@ -166,7 +169,6 @@
 
       "chatForm.title": "Write your question",
       "chatForm.subjectLabel": "1. What is your question about? <span class=\"hint\">(a few words)</span>",
-      "chatForm.chip1": "Repeat prescription", "chatForm.chip2": "Test results", "chatForm.chip3": "Skin rash",
       "chatForm.messageLabel": "2. Write your question here <span class=\"hint\">(in your own words)</span>",
       "chatForm.attachmentLabel": "3. Add a file or picture <span class=\"hint\">(optional)</span>",
       "chatForm.attachmentStepLabel": "Detailed instructions for this step:",
@@ -308,7 +310,9 @@
       "meds.checkTitle": "Controleer uw bestelling",
       "meds.prescriptionOnly": "Alleen verkrijgbaar op recept",
       "meds.med1": "Salbutamol inhalator 100 microgram",
+      "meds.med1Dose": "Gebruik indien nodig, maximaal 8 pufjes per dag",
       "meds.med2": "Lisinopril 10 mg tabletten",
+      "meds.med2Dose": "1 tablet per dag",
       "meds.pickup1": "Ophalen bij Apotheek Koedijk",
       "meds.pickup1d": "Daalmeerpad 12, Koedijk",
       "meds.pickup2": "Ophalen bij Apotheek Alkmaar Centrum",
@@ -319,18 +323,19 @@
       "meds.summaryPickup": "Ophaallocatie:",
       "meds.submit": "Bestelling versturen",
       "meds.confirmTitle": "Uw bestelling is verstuurd",
-      "meds.confirmMsg": "De praktijk controleert uw aanvraag. U krijgt een bericht wanneer uw medicijn klaarstaat.",
+      "meds.confirmMsg": "Uw medicijnaanvraag is verstuurd naar de huisartsenpraktijk. U krijgt bericht via e-mail of sms wanneer u het kunt ophalen.",
       "meds.more": "Terug naar mijn medicijnen",
-      "meds.notSubmittedNotice": "Dit is alleen een overzicht — uw bestelling is nog niet verstuurd.",
+      "meds.notSubmittedNotice": "Controleer uw aanvraag. Er is nog niets verstuurd.",
       "meds.medOther": "Mijn medicijn staat niet in deze lijst",
       "meds.medOtherHint": "Laat ons weten welk medicijn u bedoelt",
       "meds.medOtherInputLabel": "Welk medicijn heeft u nodig?",
       "meds.medUnsure": "Ik weet niet zeker welk medicijn ik nodig heb",
       "meds.medUnsureHint": "De praktijk neemt contact met u op om dit te bespreken",
+      "meds.unsureHelp": "Twijfelt u over uw medicatie? Bel de praktijk of apotheek:",
       "meds.usageTitle": "Hoe gebruikt u dit medicijn",
       "meds.usageSalbutamol": "Schud de inhalator goed. Adem volledig uit, plaats het mondstuk in uw mond en adem langzaam in terwijl u één keer indrukt. Houd uw adem 10 seconden in. Gebruik alleen wanneer nodig, maximaal 8 pufjes per dag, tenzij uw huisarts iets anders zegt.",
       "meds.usageLisinopril": "Neem één keer per dag één tablet in, elke dag op hetzelfde moment, met of zonder voedsel. Slik de tablet door met een glas water. Stop niet plotseling met dit medicijn zonder dit met uw huisarts te overleggen.",
-      "meds.usageUnknown": "Zodra uw aanvraag is gecontroleerd, ontvangt u instructies voor dit medicijn.",
+      "meds.usageUnknown": "Neem contact op met de huisartsenpraktijk of apotheek. Zij helpen u de juiste medicatie te bepalen.",
       "meds.notOnList": "(niet op de lijst)",
       "meds.toDiscuss": "Niet zeker — te bespreken met de praktijk",
       "meds.confirmCallNote": "Foutje gemaakt? Bel ons:",
@@ -355,7 +360,6 @@
 
       "chatForm.title": "Schrijf uw vraag",
       "chatForm.subjectLabel": "1. Waar gaat uw vraag over? <span class=\"hint\">(een paar woorden)</span>",
-      "chatForm.chip1": "Herhaalrecept", "chatForm.chip2": "Uitslag onderzoek", "chatForm.chip3": "Huiduitslag",
       "chatForm.messageLabel": "2. Schrijf hier uw vraag <span class=\"hint\">(in uw eigen woorden)</span>",
       "chatForm.attachmentLabel": "3. Voeg een bestand of foto toe <span class=\"hint\">(optioneel)</span>",
       "chatForm.attachmentStepLabel": "Gedetailleerde instructies voor deze stap:",
@@ -649,7 +653,7 @@
   var qIndex = 0, qAnswers = [];
   var chosenDay = null, chosenTime = null;
   var chosenMedicine = null, chosenPickup = null, chosenMedicineOther = "";
-  var chosenChatRecipient = null, chosenChatCategory = null;
+  var chosenChatRecipient = null, chosenChatCategory = null, chatSubjectAutoFilled = false;
 
   var $ = function (s, root) { return (root || document).querySelector(s); };
   var $$ = function (s, root) { return Array.prototype.slice.call((root || document).querySelectorAll(s)); };
@@ -1064,6 +1068,22 @@
     "new": "chatCategory.opt1", before: "chatCategory.opt2",
     prescription: "chatCategory.opt3", results: "chatCategory.opt4", other: "chatCategory.opt5"
   };
+  var CHAT_FORM_CHIPS = {
+    en: {
+      "new": ["New complaint", "General question"],
+      before: ["Follow-up on an earlier visit", "Result of treatment"],
+      prescription: ["Repeat prescription Salbutamol", "Repeat prescription Lisinopril"],
+      results: ["Blood test result", "Hospital test result"],
+      other: ["Skin rash", "Something else"]
+    },
+    nl: {
+      "new": ["Nieuwe klacht", "Algemene vraag"],
+      before: ["Vervolg op eerder consult", "Resultaat van behandeling"],
+      prescription: ["Herhaalrecept Salbutamol", "Herhaalrecept Lisinopril"],
+      results: ["Uitslag bloedonderzoek", "Uitslag ziekenhuisonderzoek"],
+      other: ["Huiduitslag", "Iets anders"]
+    }
+  };
   function chatRecipientLabel(rec) {
     return rec === "pharmacy" ? t("chatLabel.pharmacy") : t("chatLabel.gp");
   }
@@ -1092,15 +1112,42 @@
     });
     $("#chat-category-next").disabled = false;
   }
+  function renderChatFormChips() {
+    var box = $("#chat-subject-chips");
+    if (!box) return;
+    var list = (CHAT_FORM_CHIPS[state.lang] && CHAT_FORM_CHIPS[state.lang][chosenChatCategory]) || CHAT_FORM_CHIPS[state.lang].other;
+    box.innerHTML = "";
+    list.forEach(function (label) {
+      var btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "chip";
+      btn.textContent = label;
+      btn.addEventListener("click", function () {
+        $("#chat-subject").value = label;
+        $("#chat-subject").focus();
+        chatSubjectAutoFilled = true;
+      });
+      box.appendChild(btn);
+    });
+  }
   function goChatForm() {
-    if (chosenChatCategory) showView("chat-form");
+    if (!chosenChatCategory) return;
+    var subjectInput = $("#chat-subject");
+    if (subjectInput && (!subjectInput.value.trim() || chatSubjectAutoFilled)) {
+      subjectInput.value = chatCategoryLabel(chosenChatCategory);
+      chatSubjectAutoFilled = true;
+    }
+    renderChatFormChips();
+    showView("chat-form");
   }
   function resetChatFlow() {
     chosenChatRecipient = null;
     chosenChatCategory = null;
+    chatSubjectAutoFilled = false;
     $$(".chat-cat-choice").forEach(function (b) { b.classList.remove("selected"); });
     var next = $("#chat-category-next");
     if (next) next.disabled = true;
+    $("#chat-subject").value = "";
   }
   function renderChatReview() {
     var box = $("#chat-review-summary");
@@ -1270,6 +1317,7 @@
         if (active === "meds-what") renderMedicineUsage(chosenMedicine);
         if (active === "meds-check") renderMedicineCheck();
         if (active === "meds-confirm") renderMedicineConfirm();
+        if (active === "chat-form") renderChatFormChips();
         if (active === "chat-review") renderChatReview();
         if (active === "chat-confirm") renderChatConfirm();
       });
@@ -1338,15 +1386,8 @@
       updateMedsWhatNext();
     });
 
-    // chat example chips
-    $$(".example-chips").forEach(function (group) {
-      var targetId = group.getAttribute("data-chip-target");
-      $$(".chip", group).forEach(function (chip) {
-        chip.addEventListener("click", function () {
-          var inp = document.getElementById(targetId);
-          if (inp) { inp.value = chip.textContent; inp.focus(); }
-        });
-      });
+    $("#chat-subject").addEventListener("input", function () {
+      chatSubjectAutoFilled = false;
     });
 
     // chat: review (with validation), then confirm-and-send is wired via MGSubmitChat

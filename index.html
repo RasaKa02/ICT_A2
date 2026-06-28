@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MijnGezondheid.net — toegankelijk / accessible</title>
-  <link rel="stylesheet" href="css/styles.css?v=20260628-flows3" />
+  <link rel="stylesheet" href="css/styles.css?v=20260628-flows5" />
 </head>
 <body>
 
@@ -344,11 +344,11 @@
       <div class="options" role="group" id="meds-medicine-options">
         <button type="button" class="option med-choice" data-med="salbutamol" onclick="window.MGSelectMedicine && window.MGSelectMedicine('salbutamol')">
           <span class="opt-mark" aria-hidden="true"></span>
-          <span class="option-text"><strong data-i18n="meds.med1">Salbutamol inhalator 100 microgram</strong><small data-i18n="meds.prescriptionOnly">Alleen verkrijgbaar op recept</small></span>
+          <span class="option-text"><strong data-i18n="meds.med1">Salbutamol inhalator 100 microgram</strong><small data-i18n="meds.med1Dose">Gebruik indien nodig, maximaal 8 pufjes per dag</small><small data-i18n="meds.prescriptionOnly">Alleen verkrijgbaar op recept</small></span>
         </button>
         <button type="button" class="option med-choice" data-med="lisinopril" onclick="window.MGSelectMedicine && window.MGSelectMedicine('lisinopril')">
           <span class="opt-mark" aria-hidden="true"></span>
-          <span class="option-text"><strong data-i18n="meds.med2">Lisinopril 10 mg tabletten</strong><small data-i18n="meds.prescriptionOnly">Alleen verkrijgbaar op recept</small></span>
+          <span class="option-text"><strong data-i18n="meds.med2">Lisinopril 10 mg tabletten</strong><small data-i18n="meds.med2Dose">1 tablet per dag</small><small data-i18n="meds.prescriptionOnly">Alleen verkrijgbaar op recept</small></span>
         </button>
         <button type="button" class="option med-choice" data-med="other" onclick="window.MGSelectMedicine && window.MGSelectMedicine('other')">
           <span class="opt-mark" aria-hidden="true"></span>
@@ -367,6 +367,11 @@
       <div class="btn-row">
         <button class="btn secondary grow" data-go="meds-home" data-i18n="nav.previous">Vorige</button>
         <button class="btn grow" id="meds-what-next" disabled data-i18n="nav.next" onclick="window.MGGoMedicineHow && window.MGGoMedicineHow()">Volgende</button>
+      </div>
+      <div class="call-hatch">
+        <svg class="n-ico" aria-hidden="true" style="color:var(--magenta)"><use href="#i-phone"/></svg>
+        <span class="speakable" data-i18n="meds.unsureHelp">Twijfelt u over uw medicatie? Bel de praktijk of apotheek:</span>
+        <a href="tel:0725613913">072-561 3913</a>
       </div>
     </section>
 
@@ -554,11 +559,7 @@
         <div class="field">
           <label for="chat-subject" data-i18n="chatForm.subjectLabel">1. What is your question about? <span class="hint">(a few words)</span></label>
           <input type="text" id="chat-subject" />
-          <div class="example-chips" data-chip-target="chat-subject">
-            <button type="button" class="chip" data-i18n="chatForm.chip1">Repeat prescription</button>
-            <button type="button" class="chip" data-i18n="chatForm.chip2">Test results</button>
-            <button type="button" class="chip" data-i18n="chatForm.chip3">Skin rash</button>
-          </div>
+          <div class="example-chips" id="chat-subject-chips"><!-- JS renders category-based suggestions here --></div>
         </div>
         <div class="field">
           <label for="chat-message" data-i18n="chatForm.messageLabel">2. Write your question here <span class="hint">(in your own words)</span></label>
@@ -701,6 +702,6 @@
     </div>
   </div>
 
-  <script src="js/app.js?v=20260628-flows8"></script>
+  <script src="js/app.js?v=20260628-flows11"></script>
 </body>
 </html>
